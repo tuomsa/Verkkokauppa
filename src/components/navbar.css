@@ -1,9 +1,13 @@
 nav {
   box-shadow: rgb(38, 57, 77) 0px 8px 10px -10px;
 }
-h1 {
-  padding-top: 20px;
-  font-family:'Comic Sans';
+.logo {
+  font-family:'Rubik', sans-serif;
+  text-shadow: -12px -12px 4px #777;
+  font-size: 48px;
+  font-weight: 900;
+  margin-left: 20px;
+  padding-top: 20px;  
 }
 .navbar-toggler {
   border: none !important;
