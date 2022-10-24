@@ -4,6 +4,7 @@ import './navbar.css'
 export default function Navbar() {
 
   return (
+
     <nav id="navbar" className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <a id="header" className="navbar-brand">
@@ -16,5 +17,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    
   )
 }

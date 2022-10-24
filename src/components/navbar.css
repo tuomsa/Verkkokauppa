@@ -2,9 +2,9 @@ nav {
   box-shadow: rgb(38, 57, 77) 0px 8px 10px -10px;
 }
 h1 {
+  padding-top: 20px;
   font-family:'Comic Sans';
 }
-
 .navbar-toggler {
   border: none !important;
 }
