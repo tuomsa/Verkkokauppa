@@ -1,19 +1,31 @@
 .logo {
-  font-family:'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
   letter-spacing: 15px;
   text-shadow: -12px -12px 4px #777;
   font-size: 64px;
   font-weight: 900;
   -webkit-text-stroke: 1px white;
   margin-left: 20px;
-  padding-top: 20px;  
+  padding-top: 20px;
 }
+
 #header h1:first-letter {
   color: red;
   font-size: 78px;
 }
-
-.navbar-toggler , .navbar-toggler:checked {
+#shoppingCart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: black;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+#shoppingCart:hover{
+  color: red;
+}
+.navbar-toggler,
+.navbar-toggler:checked {
   border: 0px !important;
   background-color: transparent;
 }
@@ -21,14 +33,21 @@
 .navbar-nav {
   text-align: center;
 }
-.nav-item { 
-  text-align: center;
-  font-size: 24px;
+
+.nav-item a {
+  margin-left: 20px;
+  color: black;
+  -webkit-text-stroke: 0.3px white;
+  font-size: 28px;
   font-weight: 800;
   margin-top: 40px;
 
-  
 }
+
+.nav-item a:hover {
+  color: red;
+}
+
 .search {
   position: fixed;
   background-color: transparent;
@@ -41,9 +60,11 @@
   border-right: none;
   border-bottom: 2px solid black;
   border-radius: 3px;
+  color: white;
   background-color: rgb(14, 13, 13);
-  
+
 }
+
 .searchButton {
   position: fixed;
   margin-top: 40px;
@@ -58,16 +79,23 @@
 }
 
 @media (max-width: 992px) {
-  .navbar-nav{
+  .navbar-nav {
     margin-top: 80px;
   }
+
   .search {
     background-color: white;
   }
-  .nav-item {
+
+  .nav-item a {
     margin-top: 5px;
     margin-left: 15px;
     background-color: white
   }
- 
+
+  #shoppingCart {
+    margin-top: 30px;
+    margin-right: 10px;
+
+  }
 }

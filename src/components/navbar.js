@@ -9,6 +9,7 @@ export default function Navbar() {
       <div className="container-fluid">
         <a id="header" className="navbar-brand">
           <h1 className="logo">FIUKE</h1>
+          <a className="shop-link" href="#"><i class="fa-solid fa-cart-plus fa-xl" id="shoppingCart"></i></a>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
