@@ -1,12 +1,10 @@
-nav {
-  box-shadow: rgb(38, 57, 77) 0px 8px 10px -10px;
-}
 .logo {
   font-family:'Rubik', sans-serif;
   letter-spacing: 15px;
   text-shadow: -12px -12px 4px #777;
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 900;
+  -webkit-text-stroke: 1px white;
   margin-left: 20px;
   padding-top: 20px;  
 }
@@ -22,6 +20,7 @@ nav {
 }
 .search {
   position: fixed;
+  background-color: transparent;
   margin-top: 40px;
   right: 0;
   margin-right: 80px;
