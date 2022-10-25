@@ -1,5 +1,5 @@
 import React from "react";
-import bgVideo from './beach2560.mp4'
+import bgVideo from './rockyslope1920.mp4'
 import './bgVideo.css'
 
 
