@@ -3,13 +3,53 @@ nav {
 }
 .logo {
   font-family:'Rubik', sans-serif;
+  letter-spacing: 15px;
   text-shadow: -12px -12px 4px #777;
   font-size: 48px;
   font-weight: 900;
   margin-left: 20px;
   padding-top: 20px;  
 }
-.navbar-toggler {
-  border: none !important;
+.navbar-toggler , .navbar-toggler:checked {
+  border: 0px !important;
+  background-color: transparent;
 }
 
+.nav-item {
+  margin-top: 40px;
+  margin-left: 90px;
+  
+}
+.search {
+  position: fixed;
+  margin-top: 40px;
+  right: 0;
+  margin-right: 80px;
+  text-align: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid black;
+  
+}
+.searchButton {
+  position: fixed;
+  margin-top: 40px;
+  right: 0;
+  margin-right: 20px ;
+  border: none;
+  background-color: rgb(200, 196, 196);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav{
+    margin-top: 80px;
+  }
+  .nav-item {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+}

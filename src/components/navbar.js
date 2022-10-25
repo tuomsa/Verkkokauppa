@@ -12,11 +12,15 @@ export default function Navbar() {
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          Tähän tulee linkkejä
-          {/*//tähä väliin lisätään select komponenttejä*/}
+        <input type="text" className="search" placeholder="Etsi tuotteita"/> <button className ="searchButton">Etsi</button>
+          <ul className="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Miehet</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Naiset</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Nuoret</a></li>            
+          </ul>         
         </div>
       </div>
     </nav>
-    
+
   )
 }
