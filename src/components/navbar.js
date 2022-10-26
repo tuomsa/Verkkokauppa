@@ -1,6 +1,5 @@
 import React from "react"
 import './navbar.css'
-import Miehet from "./miehet"
 
 export default function Navbar() {
 
