@@ -1,3 +1,17 @@
 body {
   max-width: 2300px;
 }
+
+#miehet {
+  padding-top: 150px;
+  text-align: center;
+  margin-top: 200px;
+  height: 1020px;
+  background-color: white;
+}
+#naiset {
+  padding-top: 150px;
+  text-align: center;
+  background-color: red;
+  height: 1020px;
+}

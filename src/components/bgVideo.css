@@ -1,9 +1,11 @@
 #video {
   position: fixed;
+  background-color: white;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   z-index: -1;
-  filter: grayscale(70%)
+  filter: grayscale(70%);
+ 
   
 }

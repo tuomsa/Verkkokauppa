@@ -1,15 +1,19 @@
-.logo {
+nav {
+  margin-bottom: 800px;
+}
+
+#header {
   font-family: 'Rubik', sans-serif;
   letter-spacing: 15px;
   text-shadow: -12px -12px 4px #777;
   font-size: 64px;
-  font-weight: 900;
+  font-weight: 600;
   -webkit-text-stroke: 1px white;
   margin-left: 20px;
   padding-top: 20px;
 }
 
-#header h1:first-letter {
+#header:first-letter {
   color: red;
   font-size: 78px;
 }
@@ -36,10 +40,11 @@
 
 .nav-item a {
   margin-left: 20px;
-  color: black;
+  color: white;
+  letter-spacing: 2px;
   -webkit-text-stroke: 0.3px white;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 500;
   margin-top: 40px;
 
 }
@@ -69,7 +74,7 @@
   position: fixed;
   margin-top: 40px;
   right: 0;
-  margin-right: 20px;
+  margin-right: 25px;
   border: none;
   background-color: rgb(200, 196, 196);
   padding-left: 10px;
@@ -83,13 +88,19 @@
     margin-top: 80px;
   }
 
+  #header {
+    display: inline-block;
+  }
   .search {
+    position: fixed;
     background-color: white;
   }
 
   .nav-item a {
+    color: black;
+    text-align:  center;
+    margin-right: 15px;
     margin-top: 5px;
-    margin-left: 15px;
     background-color: white
   }
 
