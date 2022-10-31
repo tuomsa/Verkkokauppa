@@ -10,9 +10,9 @@ export default function Navbar() {
   return (
     <nav id="navbar" className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a id="header" className="navbar-brand">FIUKE</a>
-          <a className="shop-link" href="#"><i className="fa-solid fa-cart-plus fa-xl" id="shoppingCart"></i></a>
-        
+        <h1 id="header" className="navbar-brand">FIUKE</h1>
+        <a className="shop-link" href="#"><i className="fa-solid fa-cart-plus fa-xl" id="shoppingCart"></i></a>
+
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
