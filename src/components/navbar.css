@@ -56,7 +56,7 @@ nav {
 .search {
   position: fixed;
   background-color: transparent;
-  margin-top: 40px;
+  margin-top: 150px;
   right: 0;
   margin-right: 80px;
   text-align: center;
@@ -72,7 +72,7 @@ nav {
 
 .searchButton {
   position: fixed;
-  margin-top: 40px;
+  margin-top: 150px;
   right: 0;
   margin-right: 25px;
   border: none;
@@ -92,10 +92,17 @@ nav {
     display: inline-block;
   }
   .search {
-    position: fixed;
+    position: absolute;
+    margin-top: 10px;
+    display: inline-block;
+    color: black;
     background-color: white;
   }
 
+  .searchButton {
+    position: absolute;
+    margin-top: 10px;
+  }
   .nav-item a {
     color: black;
     text-align:  center;
