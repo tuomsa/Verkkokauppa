@@ -20,10 +20,10 @@ export default function Navbar() {
             <li className="nav-item"><a className="nav-link" href="#miehet">Miehet</a></li>
             <li className="nav-item"><a className="nav-link" href="#naiset">Naiset</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Nuoret</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Tarjoukset</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">linkki1</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Linkki2</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Unisex</a></li>
+            <li className="nav-item"><a className="btn disabled" href="#">Meistä</a></li>
+            <li className="nav-item"><a className="btn disabled" href="#">linkki2</a></li>
+            <li className="nav-item"><a className="btn disabled" href="#">Linkki3</a></li>
           </ul>
         </div>
       </div>

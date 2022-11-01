@@ -31,7 +31,7 @@ export default function ScrollToTop() {
     <>
       {isVisible && (
         <div className="scroll-to-top">
-          <a className="scroll" href="#">Ylös</a>
+          <a className="scroll" href="#">^</a>
         </div>
       )}
     </>

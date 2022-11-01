@@ -11,16 +11,15 @@ function App() {
     <div className='App'>
       <BgVideo />
       <Navbar />
-      
       <div id="miehet">
         <Miehet />
       </div>
       <div id="naiset">
         <Naiset />
       </div>
-      <ScrollToTop/>
+      <ScrollToTop />
     </div>
-    
+
   );
 }
 

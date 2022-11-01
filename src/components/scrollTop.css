@@ -1,9 +1,13 @@
 .scroll-to-top a{
   color: white;
-  background-color: black;
-  border-radius: 25%;
-  padding: 3px 7px 3px 8px;
+  text-align: center;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   font-size: 1.5em;
+  font-weight: 800;
+  padding-top: 7px;
   text-decoration: none;
   position: fixed;
   right: 0;
