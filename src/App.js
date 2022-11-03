@@ -3,6 +3,7 @@ import BgVideo from './components/bgvideo';
 import Miehet from './components/miehet';
 import Naiset from './components/naiset';
 import ScrollToTop from './components/scrollTop';
+import Footer from './components/footer';
 
 import './App.css';
 
@@ -18,7 +19,11 @@ function App() {
         <Naiset />
       </div>
       <ScrollToTop />
+      <div>
+        <Footer />
+      </div>
     </div>
+    
 
   );
 }

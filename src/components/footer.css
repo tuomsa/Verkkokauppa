@@ -1,0 +1,26 @@
+.main-footer {
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    padding-top: 100px;
+    position:relative;
+}
+
+.col-1{
+    text-align:left;
+    float:left;
+    }
+
+.col-2{
+    text-align:center;
+    }
+
+.col-3{
+    float:right;
+    text-align:right;
+        
+    }
+.col-sm{
+    text-align: center;
+    padding-top: 100px;
+}
