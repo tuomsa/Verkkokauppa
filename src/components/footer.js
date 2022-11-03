@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="container">
         <div className="row">
             {/*column1 vasen*/}
-            <div className="col-1">
+            <div className="col">
                 <h1>Otsikko</h1>
                 <ul className="list-unstyled">
                 <li> Eka teksti</li>
@@ -19,7 +19,7 @@ export default function Footer() {
                 </ul>
             </div>
             {/*column2 keski*/}
-            <div className="col-2">
+            <div className="col">
                 <h1>Otsikko</h1>
                 <ul className="list-unstyled">
                 <li> Eka toka teksti</li>
@@ -28,7 +28,7 @@ export default function Footer() {
                 </ul>
             </div>
                 {/*column3oikea*/}
-                <div className="col-3">
+                <div className="col">
                 <h1>Otsikko</h1>
                 <ul className="list-unstyled">
                 <li> Eka toka teksti</li>
