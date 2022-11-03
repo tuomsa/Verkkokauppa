@@ -1,12 +1,17 @@
 .main-footer {
+    position:absolute;
     bottom: 0;
     width: 100%;
     background-color: grey;
     padding-top: 100px;
     
+    
+}
+.up {
+    position: relative;
 }
 .col{
-    text-align: justify;
+    text-align: center;
     
 }
 
