@@ -1,5 +1,8 @@
 nav {
   margin-bottom: 800px;
+  background-color: rgb(49, 52, 55);
+  opacity: 0.8;
+  box-shadow: rgb(49, 52, 55) 0px 10px 50px 50px;
 }
 
 #header {
@@ -10,6 +13,7 @@ nav {
   font-weight: 600;
   -webkit-text-stroke: 1px white;
   margin-left: 20px;
+  margin-right: 100px;
   padding-top: 20px;
 }
 
@@ -17,21 +21,40 @@ nav {
   color: red;
   font-size: 78px;
 }
+
 #shoppingCart {
   position: fixed;
+  display: block;
   top: 0;
   right: 0;
-  color: black;
+  color: white;
   margin-right: 30px;
   margin-top: 30px;
 }
-#shoppingCart:hover{
+
+.login-link {
+  position: fixed;
+  text-decoration: none;
+  font-size: 1.2em;
+  top: 0;
+  right: 0;
+  color: white;
+  margin-right: 130px;
+  margin-top: 15px;
+}
+
+.login-link:hover {
   color: red;
 }
+
+#shoppingCart:hover {
+  color: red;
+}
+
 .navbar-toggler,
 .navbar-toggler:checked {
-  border: 0px !important;
-  background-color: transparent;
+  border: none;
+  
 }
 
 .navbar-nav {
@@ -39,13 +62,14 @@ nav {
 }
 
 .nav-item a {
-  margin-left: 20px;
+  margin-left: 15px;
   color: white;
-  letter-spacing: 2px;
-  -webkit-text-stroke: 0.3px white;
+  letter-spacing: 1px;
   font-size: 28px;
   font-weight: 500;
-  margin-top: 40px;
+  margin-top: 25px;
+  border-right: 4px solid red;
+  border-radius: 50%;
 
 }
 
@@ -56,7 +80,7 @@ nav {
 .search {
   position: fixed;
   background-color: transparent;
-  margin-top: 150px;
+  margin-top: 20px;
   right: 0;
   margin-right: 80px;
   text-align: center;
@@ -66,15 +90,15 @@ nav {
   border-bottom: 2px solid black;
   border-radius: 3px;
   color: white;
-  background-color: rgb(14, 13, 13);
+  background-color: rgb(39, 37, 37);
 
 }
 
 .searchButton {
   position: fixed;
-  margin-top: 150px;
+  margin-top: 20px;
   right: 0;
-  margin-right: 25px;
+  margin-right: 20px;
   border: none;
   background-color: rgb(200, 196, 196);
   padding-left: 10px;
@@ -90,10 +114,17 @@ nav {
 
   #header {
     display: inline-block;
+    margin-right: 0px;
   }
+
+  .navbar-toggler {
+    margin-top: 10px;
+  }
+
   .search {
     position: absolute;
-    margin-top: 10px;
+    margin-top: 0;
+    margin-right: 25%;
     display: inline-block;
     color: black;
     background-color: white;
@@ -101,19 +132,25 @@ nav {
 
   .searchButton {
     position: absolute;
-    margin-top: 10px;
+    margin-top: 0px;
   }
+
   .nav-item a {
-    color: black;
-    text-align:  center;
+    color: white;
+    text-align: center;
     margin-right: 15px;
     margin-top: 5px;
-    background-color: white
+  
   }
 
   #shoppingCart {
-    margin-top: 30px;
-    margin-right: 10px;
+    margin-top: 150px;
 
+  }
+
+  .login-link {
+    display: inline;
+    margin-top: 140px;
+    margin-right: 43%;
   }
 }

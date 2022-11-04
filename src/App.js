@@ -5,6 +5,7 @@ import Naiset from './components/naiset';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
 
+
 import './App.css';
 
 function App() {
@@ -18,13 +19,13 @@ function App() {
       <div id="naiset">
         <Naiset />
       </div>
-      <ScrollToTop />
+      <div id="footer">
+      <Footer />
+      </div>
       <div>
-        <Footer />
+        <ScrollToTop />
       </div>
     </div>
-    
-
   );
 }
 
