@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
+//Pictures
 import Bike from './imgVid/productImg/bicycle1.png'
+import Cyclist from './imgVid/productImg/cyclist.png'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -50,7 +52,7 @@ export default function Carousel() {
         </SwiperSlide>
         <SwiperSlide>Sasa</SwiperSlide>
         <SwiperSlide>Juha</SwiperSlide>
-        <SwiperSlide>Huh miten kätevä?</SwiperSlide>
+        <SwiperSlide> <p>Raju pyöräiliä!!1</p> <a><img src={Cyclist} /></a> </SwiperSlide>
         <SwiperSlide>Ville</SwiperSlide>
         <SwiperSlide>Mika</SwiperSlide>
         <SwiperSlide>????</SwiperSlide>
