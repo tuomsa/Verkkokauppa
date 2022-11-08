@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(181, 155, 155);
+  background-color: transparent; /* rgb(181, 155, 155) */
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;

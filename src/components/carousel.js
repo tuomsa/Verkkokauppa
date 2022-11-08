@@ -18,8 +18,9 @@ export default function Carousel() {
     <>
       <Swiper
         slidesPerView={1}
-        spaceBetween={10}
         slidesPerGroup={1}
+        spaceBetween={10}
+        
         breakpoints={{  
 
           481: {
@@ -49,7 +50,7 @@ export default function Carousel() {
         </SwiperSlide>
         <SwiperSlide>Sasa</SwiperSlide>
         <SwiperSlide>Juha</SwiperSlide>
-        <SwiperSlide>Tuomas</SwiperSlide>
+        <SwiperSlide>Huh miten kätevä?</SwiperSlide>
         <SwiperSlide>Ville</SwiperSlide>
         <SwiperSlide>Mika</SwiperSlide>
         <SwiperSlide>????</SwiperSlide>
