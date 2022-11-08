@@ -1,6 +1,6 @@
 import React from "react";
-import bgVideo from './Rockyslope1920optimoitu.mp4'
-import './bgVideo.css'
+import bgVideo from '../imgVid/Rockyslope1920.mp4'
+import '../styles/bgVideo.css'
 
 
 export default function Navbar() {

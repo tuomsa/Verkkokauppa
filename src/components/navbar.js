@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react";
-import './navbar.css'
+import './styles/navbar.css'
 
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
           <ul className="navbar-nav">
             <li className="nav-item"><a className="nav-link" href="#miehet">Miehet</a></li>
-            <li className="nav-item"><a className="nav-link" href="#naiset">Naiset</a></li>
+            <li className="nav-item"><a className="nav-link" href="#maastopyorat">Maastopyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Nuoret</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Unisex</a></li>
             <li className="nav-item"><a className="nav-link" href="#footer">click to footer</a></li>

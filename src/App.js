@@ -1,7 +1,7 @@
 import Navbar from './components/navbar';
-import BgVideo from './components/bgvideo';
-import Miehet from './components/miehet';
-import Naiset from './components/naiset';
+import BgVideo from './components/pages/bgvideo';
+import Miehet from './components/pages/miehet';
+import Maastopyorat from './components/pages/maastopyorat';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
 
@@ -16,11 +16,11 @@ function App() {
       <div id="miehet">
         <Miehet />
       </div>
-      <div id="naiset">
-        <Naiset />
+      <div id="maastopyorat">
+        <Maastopyorat />
       </div>
       <div id="footer">
-      <Footer />
+        <Footer />
       </div>
       <div>
         <ScrollToTop />
