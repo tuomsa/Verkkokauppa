@@ -17,9 +17,9 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link" href="#miehet">Miehet</a></li>
+            <li className="nav-item"><a className="nav-link" href="#maantiepyorat">Maantiepyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#maastopyorat">Maastopyörät</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Nuoret</a></li>
+            <li className="nav-item"><a className="nav-link" href="#sahkopyorat">Sähköpyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Unisex</a></li>
             <li className="nav-item"><a className="nav-link" href="#footer">click to footer</a></li>
             <li className="nav-item"><a className="btn disabled" href="#">linkki2</a></li>
