@@ -17,9 +17,24 @@ export default function Carousel() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={20}
-        slidesPerGroup={3}
+        slidesPerView={1}
+        spaceBetween={10}
+        slidesPerGroup={1}
+        breakpoints={{  
+
+          481: {
+            slidesPerView: 2,
+            slidesPerGroup:2,
+            spaceBetween: 10
+          },
+          769: {
+            slidesPerView: 3,
+            slidesPerGroup:3,
+            spaceBetween: 10
+          }
+
+        }}
+
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
