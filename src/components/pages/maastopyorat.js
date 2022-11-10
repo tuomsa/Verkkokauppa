@@ -1,12 +1,13 @@
 import Carousel from "../carousel"
+import '../styles/swiperpage.css'
 
 export default function Maastopyorat() {
   return (
-    <div id="app">
-      <body>
-        <h1>Maastopyörät</h1>
+    
+      <div id="card">
+        <h1 id="header">Maastopyörät</h1>
         <Carousel />
-      </body>
-    </div>
+      </div>
+    
   )
 }

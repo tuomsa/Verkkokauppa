@@ -8,24 +8,24 @@
 
 #maantiepyorat { 
   padding-top: 15px;
+  padding-bottom: 10px;
   text-align: center;
   margin-top: 200px;
   height: 1340px;
-  background-color: rgb(227, 223, 223);
-  opacity: 0.95;
+  background-color: rgb(239, 235, 235);
 }
 #maastopyorat {
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: rgb(181, 155, 155);
+  background-color: rgb(239, 235, 235);
   height: 1340px;
 }
 #sahkopyorat {
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
-  background-color: rgb(240, 235, 170);
+  background-color: rgb(239, 235, 235);
   height: 1340px;
 
 }

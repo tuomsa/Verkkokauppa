@@ -8,7 +8,7 @@ body {
 }
 
 .swiper {
-  width: 99%;
+  width: 100%;
   height: 90%;
 }
 
@@ -16,6 +16,7 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  height: 90vh;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -31,7 +32,9 @@ body {
   -webkit-align-items: center;
   align-items: center;
   border-radius: 5px;
-  padding-top: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  
 }
 
 .swiper-slide img {
@@ -41,7 +44,7 @@ body {
   object-fit: cover;
 }
 
-.swiper-slide p {
+.swiper-slide h1 {   /* Headeri */
   position: fixed;
   width: 100%;
   top: 0px;

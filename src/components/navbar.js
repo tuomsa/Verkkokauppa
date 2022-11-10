@@ -20,8 +20,7 @@ export default function Navbar() {
             <li className="nav-item"><a className="nav-link" href="#maantiepyorat">Maantiepyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#maastopyorat">Maastopyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#sahkopyorat">Sähköpyörät</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Unisex</a></li>
-            <li className="nav-item"><a className="nav-link" href="#footer">click to footer</a></li> 
+            <li className="nav-item"><a className="nav-link" href="#footer">footer</a></li> 
           </ul>
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
         </div>

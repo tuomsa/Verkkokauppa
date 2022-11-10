@@ -47,8 +47,8 @@ export default function Carousel() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide id="eka"><a><img src={Bike} /></a>
-          <p>Tähän voi sitten kirjotella mitä ikinä lystää!!</p>
+        <SwiperSlide id="Maantiepyora"><a><img src={Bike} /></a>
+
         </SwiperSlide>
         <SwiperSlide>Sasa</SwiperSlide>
         <SwiperSlide>Juha</SwiperSlide>

@@ -1,12 +1,13 @@
 import Carousel from "../carousel"
+import '../styles/swiperpage.css'
 
 export default function Maantiepyorat() {
   return (
-    <div id="app">
-      <body>
-        <h1>Maantiepyörät</h1>
+    
+      <div id="card">
+        <h1 id="header">Maantiepyörät</h1>
         <Carousel />
-      </body>
-    </div>
+      </div>
+    
   )
 }
