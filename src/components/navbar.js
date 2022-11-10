@@ -17,9 +17,9 @@ export default function Navbar() {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
-            <li className="nav-item" id="leftNav"><a className="nav-link" href="#miehet">Miehet</a></li>
+            <li className="nav-item"><a className="nav-link" href="#maantiepyorat">Maantiepyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#maastopyorat">Maastopyörät</a></li>
-            <li className="nav-item"><a className="nav-link" href="#">Nuoret</a></li>
+            <li className="nav-item"><a className="nav-link" href="#sahkopyorat">Sähköpyörät</a></li>
             <li className="nav-item"><a className="nav-link" href="#">Unisex</a></li>
             <li className="nav-item"><a className="nav-link" href="#footer">click to footer</a></li> 
           </ul>

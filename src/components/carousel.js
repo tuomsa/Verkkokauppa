@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
+//Pictures
 import Bike from './imgVid/productImg/bicycle1.png'
+import Cyclist from './imgVid/productImg/cyclist.png'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,9 +19,25 @@ export default function Carousel() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={20}
-        slidesPerGroup={3}
+        slidesPerView={1}
+        slidesPerGroup={1}
+        spaceBetween={10}
+        
+        breakpoints={{  
+
+          481: {
+            slidesPerView: 2,
+            slidesPerGroup:2,
+            spaceBetween: 10
+          },
+          769: {
+            slidesPerView: 3,
+            slidesPerGroup:3,
+            spaceBetween: 10
+          }
+
+        }}
+
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
@@ -32,9 +50,9 @@ export default function Carousel() {
         <SwiperSlide id="eka"><a><img src={Bike} /></a>
           <p>Tähän voi sitten kirjotella mitä ikinä lystää!!</p>
         </SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide>Tuomas</SwiperSlide>
+        <SwiperSlide>Sasa</SwiperSlide>
+        <SwiperSlide>Juha</SwiperSlide>
+        <SwiperSlide> <p>Raju pyöräiliä!!1</p> <a><img src={Cyclist} /></a> </SwiperSlide>
         <SwiperSlide>Ville</SwiperSlide>
         <SwiperSlide>Mika</SwiperSlide>
         <SwiperSlide>????</SwiperSlide>

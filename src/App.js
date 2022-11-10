@@ -1,10 +1,10 @@
 import Navbar from './components/navbar';
 import BgVideo from './components/pages/bgvideo';
-import Miehet from './components/pages/miehet';
+import Maantiepyorat from './components/pages/maantiepyorat';
 import Maastopyorat from './components/pages/maastopyorat';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
-
+import Sahkopyorat from './components/pages/sahkopyorat';
 
 import './App.css';
 
@@ -13,11 +13,14 @@ function App() {
     <div className='App'>
       <BgVideo />
       <Navbar />
-      <div id="miehet">
-        <Miehet />
+      <div id="maantiepyorat">
+        <Maantiepyorat />
       </div>
       <div id="maastopyorat">
         <Maastopyorat />
+      </div>
+      <div id="sahkopyorat">
+        <Sahkopyorat />
       </div>
       <div id="footer">
         <Footer />
