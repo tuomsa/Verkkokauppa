@@ -32,8 +32,8 @@ export default function Carousel() {
         <SwiperSlide id="eka"><a><img src={Bike} /></a>
           <p>Tähän voi sitten kirjotella mitä ikinä lystää!!</p>
         </SwiperSlide>
-        <SwiperSlide>Sasa</SwiperSlide>
-        <SwiperSlide>Juha</SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
         <SwiperSlide>Tuomas</SwiperSlide>
         <SwiperSlide>Ville</SwiperSlide>
         <SwiperSlide>Mika</SwiperSlide>
