@@ -5,7 +5,8 @@ import Maastopyorat from './components/pages/maastopyorat';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
 import Sahkopyorat from './components/pages/sahkopyorat';
-
+import Popup from './components/popup';
+import Login from './components/login'
 import './App.css';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
     <div className='App'>
       <BgVideo />
       <Navbar />
+      <Popup />
+      
       <div id="maantiepyorat">
         <Maantiepyorat />
       </div>
