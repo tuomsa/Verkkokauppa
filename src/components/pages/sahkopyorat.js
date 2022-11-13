@@ -1,4 +1,5 @@
-import Carousel from "../carousel"
+
+import Carousel3 from "../carousel3"
 import '../styles/swiperpage.css'
 
 export default function Sahkopyorat() {
@@ -6,7 +7,7 @@ export default function Sahkopyorat() {
     
       <div id="card">
         <h1 id="header">Sähköpyörät</h1>
-        <Carousel />
+        <Carousel3 />
       </div>
     
   )
