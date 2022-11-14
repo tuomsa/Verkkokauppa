@@ -20,6 +20,7 @@
 
 @media (max-width: 992px) {
   .scroll-to-top a{
+    color: black;
     margin-bottom: 80px;
 
   }
