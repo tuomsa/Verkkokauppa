@@ -18,15 +18,22 @@ form {
     top: 68px;
     right: 140px;
 }
+
 .loginBtn {
     background-color: transparent;
     color: white;
     font-size: 0.8em;
     border: none;
 }
+
+.loginBtn:hover {
+    color: red;
+}
+
 .loginImg {
     display: none;
 }
+
 .loginImg:hover {
     color: red;
 }
