@@ -88,6 +88,7 @@ form {
 }
 
 .register , .register a{
+    font-size: 0.9em;
     margin-top: 10px;
     text-decoration: none;
     color: black;   
