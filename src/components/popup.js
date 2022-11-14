@@ -27,7 +27,7 @@ export default function PopUp() {
               <input type="password" name="pass" className="inputPW" placeholder="Salasana" required />
             </div>
             <div className="button-container">
-              <input type="submit" /
+              <input type="submit" />
             </div>
             <div className="register"><a href="#">Ei vielä rekisteröityä tiliä? Liity tästä.</a></div>
           </form>
