@@ -17,23 +17,8 @@ nav {
   top: 0;
   right: 0;
   color: white;
-  margin-right: 70px;
-  margin-top: 55px;
-}
-
-.login-link {
-  position: fixed;
-  text-decoration: none;
-  font-size: 1.3em;
-  top: 0;
-  right: 0;
-  color: white;
-  margin-right: 180px;
-  margin-top: 45px;
-}
-
-.login-link:hover {
-  color: red;
+  margin-right: 50px;
+  margin-top: 80px;
 }
 
 #shoppingCart:hover {
@@ -65,7 +50,7 @@ nav {
 .search {
   position: sticky;
   background-color: transparent;
-  width: 150px;
+  width: 320px;
   margin-top: 70px;
   margin-left: 21%;
   text-align: center;

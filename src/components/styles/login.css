@@ -1,27 +1,127 @@
+form {
+    background-image: url('../imgVid/LogoRotated.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgba(128, 128, 128, 0.287);
+}
+
+.popup {
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4em;
+    position:absolute;
+    top: 68px;
+    right: 140px;
+}
+.loginBtn {
+    background-color: transparent;
+    color: white;
+    font-size: 0.8em;
+    border: none;
+}
+.loginImg {
+    display: none;
+}
+.loginImg:hover {
+    color: red;
+}
+
 .login {
+    color: black;
     position:fixed;
     top: 0;
     left:0;
     width: 100%;
     height:100vh;
     background-color: rgba(0,0,0,0.5);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    opacity: 0.95;
 }
+
 .login-inner {
     position: relative;
     padding: 32px;
     width:100%;
     max-width: 640px;
     background-color: #fff;
+    border-radius: 5px;
 }
+
 .login-inner .close-btn {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 0px;
+    right: 0px;
+    color: red;
+    background: none;
+    border: none;
+    font-size: 1.4em;
+}
+.inputEmail , .inputPW {
+    width: 400px;
+    margin-top: 8px;
+    text-align: center;
+}
 
+.inputEmail {
+    background-image: url("../imgVid/mail.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 5px;
+    
+}
+
+.inputPW {
+    background-image: url("../imgVid/padlock.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 5px;
+}
+
+.button-container {
+    margin-top: 15px;
+
+}
+.register , .register a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.register a:hover {
+    color: red;
+
+}
+
+
+@media (max-width: 992px) {
+    .logintxt {
+        display: none;
+    }
+    .loginImg {
+        display: block;
+        position: fixed;
+        right: 0;
+        margin-right: 20px;
+        margin-top: 15px;
+        height: 32px;
+        filter: invert(100%);
+    }
+    .login-inner {
+        margin-top: 120px;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 15px;
+    }
+    .inputEmail , .inputPW {
+        width: 95%;
+    }
 
 }
