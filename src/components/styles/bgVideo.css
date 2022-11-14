@@ -4,6 +4,8 @@
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  border: 1px solid gray;
+  max-width: 1920px;
   z-index: -1;
   filter: grayscale(30%) blur(5px)
   

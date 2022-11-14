@@ -1,17 +1,20 @@
-  #app { height: 100% }
-  html,
-  body {
+  html
+   {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     position: relative;
-    height: 71.5%;
+    max-height: 1020px;
+    max-width: 1920px;
+    background-color: gray;
   }
-
 
 #maantiepyorat { 
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
-  margin-top: 200px;
-  height: 1000px;
+  margin-top: 800px;
+  max-height: 1020px;
   background-color: rgb(239, 235, 235);
 }
 #maastopyorat {
@@ -19,13 +22,13 @@
   padding-bottom: 10px;
   text-align: center;
   background-color: rgb(239, 235, 235);
-  height: 1000px;
+  max-height: 1020px;
 }
 #sahkopyorat {
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: center;
   background-color: rgb(239, 235, 235);
-  height: 1000px;
+  max-height: 1020px;
 
 }
