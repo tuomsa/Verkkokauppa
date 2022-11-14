@@ -50,3 +50,12 @@ body {
   top: 0px;
   margin-top: 15px;
 }
+
+.swiper-button-prev {
+  color: red;
+}
+
+.swiper-button-next {
+  color: red; 
+}
+
