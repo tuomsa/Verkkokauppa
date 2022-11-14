@@ -14,8 +14,7 @@ function App() {
     <div className='App'>
       <BgVideo />
       <Navbar />
-      <Popup />
-      
+      <Popup />  
       <div id="maantiepyorat">
         <Maantiepyorat />
       </div>

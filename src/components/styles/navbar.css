@@ -27,20 +27,19 @@ nav {
 
 .navbar-nav {
   text-align: center;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 .nav-item a {
   font-family: 'Rubik', sans-serif;
   font-family: 'Rubik Dirt', cursive;
   color: rgb(254, 254, 186);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 24px;
   margin-top: 50px;
-  margin-right: 10px;
+  margin-right: 30px;
   border-right: 4px solid red;
   border-radius: 50%;
-
 }
 
 .nav-item a:hover {
@@ -51,8 +50,8 @@ nav {
   position: sticky;
   background-color: transparent;
   width: 320px;
-  margin-top: 70px;
-  margin-left: 21%;
+  margin-top: 50px;
+  margin-left: 10%;
   text-align: center;
   border-top: none;
   border-left: none;
@@ -67,7 +66,7 @@ nav {
 
 .searchButton {
   position: sticky;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 20px;
   right: 0;
   margin-right: 20px;
@@ -89,8 +88,9 @@ nav {
   .navbar-nav {
     margin-top: 60px;
   }
+
 #logo img{
-  position: fixed;
+  position: relative;
   margin-top: 0px;
 }
 
@@ -101,15 +101,16 @@ nav {
   }
 
   .search {
-    margin-left: 100px;
+    position: absolute;
+    margin-left: 10px;
     color: black;
+    width: 250px;
     background-color: white;
   }
 
   .searchButton {
     position: absolute;
     margin-top: 70px;
-   
   }
 
   .nav-item a {

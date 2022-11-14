@@ -6,15 +6,15 @@ form {
 }
 
 .popup {
+    position:absolute;
+    display: inline-block;
     font-family: inherit;
     border-radius: 5px;
     background-color: transparent;
     border: none;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    text-decoration: none;   
     font-size: 1.4em;
-    position:absolute;
     top: 68px;
     right: 140px;
 }
@@ -73,8 +73,7 @@ form {
     background-image: url("../imgVid/mail.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 5px;
-    
+    background-position: 5px;  
 }
 
 .inputPW {
@@ -86,18 +85,16 @@ form {
 
 .button-container {
     margin-top: 15px;
-
 }
+
 .register , .register a{
     margin-top: 10px;
     text-decoration: none;
-    color: black;
-    
+    color: black;   
 }
 
 .register a:hover {
     color: red;
-
 }
 
 
@@ -111,7 +108,7 @@ form {
         right: 0;
         margin-right: 20px;
         margin-top: 15px;
-        height: 32px;
+        height: 30px;
         filter: invert(100%);
     }
     .login-inner {
