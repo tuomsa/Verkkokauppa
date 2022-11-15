@@ -114,10 +114,11 @@ form {
     }
     .loginImg {
         display: block;
-        position: fixed;
-        right: 0;
-        margin-right: 20px;
-        margin-top: 15px;
+        position: absolute;
+        right: -120px;
+        top: 30px;
+        
+        
         height: 30px;
         filter: invert(100%);
     }
