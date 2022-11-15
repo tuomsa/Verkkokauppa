@@ -3,7 +3,7 @@ import { useState } from "react";
 import Logo from "./imgVid/logo.png"
 import './styles/navbar.css'
 import Popup from './popup';
-
+import BgVideo from './pages/bgvideo';
 
 export default function Navbar() {
 
@@ -25,6 +25,10 @@ export default function Navbar() {
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
         </div>
       </div>
+    
+    <div>
+     <BgVideo />
+    </div>
     </nav>
   )
 }

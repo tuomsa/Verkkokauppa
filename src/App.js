@@ -1,5 +1,5 @@
 import Navbar from './components/navbar';
-import BgVideo from './components/pages/bgvideo';
+
 import Maantiepyorat from './components/pages/maantiepyorat';
 import Maastopyorat from './components/pages/maastopyorat';
 import ScrollToTop from './components/scrollTop';
@@ -11,7 +11,6 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <BgVideo />
       <Navbar /> 
       <div id="maantiepyorat">
         <Maantiepyorat />
