@@ -42,3 +42,23 @@
   
 
 }
+
+@media (max-width: 992px) {
+  
+  
+  #maantiepyorat { 
+    text-align: center;
+    
+
+  }
+
+  #maastopyorat {
+    text-align: center;
+
+  }
+  #sahkopyorat {
+    text-align: center;
+
+  }
+
+}
