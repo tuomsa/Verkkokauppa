@@ -6,9 +6,14 @@ import loginIcon from "./imgVid/login.png"
 
 {/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */}
 
-export default function PopUp() {
+export default function PopUp(props) {
 
-    const [buttonPopUp, setButtonPopup] = useState(false);
+    const [buttonPopUp, setButtonPopup] = useState(false);    
+    const testLogin = () => {
+    var userName = document.getElementById('uname').value;
+    props.setLoggedIn(true);
+    props.setUserName(userName);
+    }
 
     return (
       <div className="popup">
@@ -21,13 +26,13 @@ export default function PopUp() {
           <form>
             <div><h1>KIRJAUDU SISÄÄN</h1></div>
             <div className="input-container">
-              <input type="text" name="uname" className="inputEmail" placeholder="Sähköpostiosoite" required />
+              <input type="text" name="uname" id="uname" className="inputEmail" placeholder="Sähköpostiosoite" required />
             </div>
             <div className="input-container">
-              <input type="password" name="pass" className="inputPW" placeholder="Salasana" required />
+              <input type="password" name="pass" className="inputPW" placeholder="Salasana" />
             </div>
             <div className="button-container">
-              <input type="submit" />
+            <button className="" onClick={testLogin}>Lähetä</button>
             </div>
             <div className="register"><a href="#">Ei vielä rekisteröityä tiliä? Liity tästä.</a></div>
           </form>

@@ -51,6 +51,19 @@ nav {
 .nav-item a:hover {
   color: red;
 }
+.logout {
+  display: inline;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.203);
+  border: none;
+  color: white;
+  font-size: 1.3em;
+  width: 320px;
+  height: 35px;
+  right: 0;
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
 
 .search {
   position: absolute;
@@ -124,9 +137,13 @@ nav {
     color: transparent;
 
   }
-
-  .search {
+  .logout {
     position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 15%;
+  }
+  .search {
     margin-left: 10px;
     margin-top: 535px;
     color: black;

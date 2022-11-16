@@ -1,17 +1,25 @@
+import { useState } from 'react';
 import Navbar from './components/navbar';
-
 import Maantiepyorat from './components/pages/maantiepyorat';
 import Maastopyorat from './components/pages/maastopyorat';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
 import Sahkopyorat from './components/pages/sahkopyorat';
-import Login from './components/login'
 import './App.css';
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+	const [userName, setUserName] = useState('');
+
   return (
     <div className='App'>
-      <Navbar /> 
+      <Navbar
+        loggedIn={loggedIn}
+        setLoggedIn={setLoggedIn}
+        userName={userName}
+        setUserName={setUserName}
+      />
       <div id="maantiepyorat">
         <Maantiepyorat />
       </div>
