@@ -28,7 +28,7 @@ export default function Carousel1() {
           481: {
             slidesPerView: 2,
             slidesPerGroup:2,
-            spaceBetween: 10
+            spaceBetween: 5
           },
           769: {
             slidesPerView: 3,

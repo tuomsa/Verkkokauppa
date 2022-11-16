@@ -1,9 +1,8 @@
 #card {
   font-family: 'Rubik', sans-serif;
   font-family: 'Rubik Dirt', cursive;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 30px;
 }
 
-#header h1{
-  position: fixed;
-  margin-top: 50px;
-}
