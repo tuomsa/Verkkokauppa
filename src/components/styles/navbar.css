@@ -95,9 +95,24 @@ nav {
   font-size: 1.2em;
 }
 
+@media screen and (max-width: 1750px) {
+
+  #navbarSupportedContent {
+    margin-top: 200px;
+  }
+
+  .searchButton {
+    margin-top: -230px;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     margin-top: 60px;
+  }
+
+  #navbarSupportedContent {
+    margin-top: 0px;
   }
 
   #logo img {
@@ -170,3 +185,4 @@ nav {
 
 
 }
+
