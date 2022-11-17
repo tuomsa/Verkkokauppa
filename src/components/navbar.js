@@ -11,7 +11,7 @@ export default function Navbar(props) {
   const [search, setSearch] = useState('')
 
   return (
-    
+
     <nav id="navbar" className="navbar navbar-expand-lg ">
       <div className="container-fluid">
         <div id="logo"><img src={Logo} alt="logo" /></div>
@@ -27,7 +27,7 @@ export default function Navbar(props) {
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
         </div>
       </div>
-      <div>       
+      <div>
         {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         {/*<BgVideo />*/}
       </div>

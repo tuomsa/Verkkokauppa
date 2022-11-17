@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./styles/carousel.css";
@@ -18,8 +17,9 @@ import { Pagination, Navigation } from "swiper";
 export default function Carousel1() {
   return (
     <>
+    <div className="main">
       <Swiper
-        slidesPerView={1}
+        slidesPerView={5}
         slidesPerGroup={1}
         spaceBetween={10}
         
@@ -31,8 +31,8 @@ export default function Carousel1() {
             spaceBetween: 5
           },
           769: {
-            slidesPerView: 3,
-            slidesPerGroup:3,
+            slidesPerView: 5,
+            slidesPerGroup:1,
             spaceBetween: 10
           }
 
@@ -47,9 +47,7 @@ export default function Carousel1() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide id="Maantiepyora"><a><img src={Bike} /></a>
-
-        </SwiperSlide>
+        <SwiperSlide><a><img src={Bike} /></a></SwiperSlide>
         <SwiperSlide>Sasa</SwiperSlide>
         <SwiperSlide>Juha</SwiperSlide>
         <SwiperSlide> <p>ERILAINEN1</p> <a><img src={Cyclist} /></a> </SwiperSlide>
@@ -59,6 +57,7 @@ export default function Carousel1() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
+      </div>
     </>
   );
 }

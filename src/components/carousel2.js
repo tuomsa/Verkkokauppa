@@ -18,8 +18,9 @@ import { Pagination, Navigation } from "swiper";
 export default function Carousel2() {
   return (
     <>
+    <div className="main">
       <Swiper
-        slidesPerView={1}
+        slidesPerView={5}
         slidesPerGroup={1}
         spaceBetween={10}
         
@@ -31,8 +32,8 @@ export default function Carousel2() {
             spaceBetween: 10
           },
           769: {
-            slidesPerView: 3,
-            slidesPerGroup:3,
+            slidesPerView: 5,
+            slidesPerGroup:1,
             spaceBetween: 10
           }
 
@@ -59,6 +60,7 @@ export default function Carousel2() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
+      </div>
     </>
   );
 }

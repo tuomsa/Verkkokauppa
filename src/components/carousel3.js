@@ -19,8 +19,9 @@ import { Pagination, Navigation } from "swiper";
 export default function Carousel3() {
   return (
     <>
+    <div className="main">
       <Swiper
-        slidesPerView={1}
+        slidesPerView={5}
         slidesPerGroup={1}
         spaceBetween={10}
         
@@ -32,8 +33,8 @@ export default function Carousel3() {
             spaceBetween: 10
           },
           769: {
-            slidesPerView: 3,
-            slidesPerGroup:3,
+            slidesPerView: 5,
+            slidesPerGroup:1,
             spaceBetween: 10
           }
 
@@ -48,9 +49,7 @@ export default function Carousel3() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide id="Maantiepyora"><a><img src={KidBike} /></a>
-
-        </SwiperSlide>
+        <SwiperSlide id="Maantiepyora"><a><img src={KidBike} /></a></SwiperSlide>
         <SwiperSlide>Sasa</SwiperSlide>
         <SwiperSlide>Juha</SwiperSlide>
         <SwiperSlide> <p>ERILAINEN 3</p> <a><img src={Cyclist} /></a> </SwiperSlide>
@@ -60,6 +59,7 @@ export default function Carousel3() {
         <SwiperSlide>Slide 8</SwiperSlide>
         <SwiperSlide>Slide 9</SwiperSlide>
       </Swiper>
+      </div>
     </>
   );
 }
