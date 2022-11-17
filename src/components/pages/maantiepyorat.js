@@ -1,4 +1,4 @@
-
+import React from "react";
 import Carousel1 from "../carousel1"
 import '../styles/swiperpage.css'
 

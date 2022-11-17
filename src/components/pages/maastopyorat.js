@@ -1,3 +1,4 @@
+import React from "react";
 import Carousel2 from "../carousel2"
 import '../styles/swiperpage.css'
 
