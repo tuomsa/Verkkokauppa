@@ -1,13 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
 
 //Styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles/carousel.css";  // tuote css muokkaus
 
-//Pictures(BIKE)
+/*Pictures(BIKE)
 import Bike1 from './imgVid/productImg/bicycle1.png';
 import Bike2 from './imgVid/productImg/cyclist.png';
 import Bike3 from './imgVid/productImg/kid-bike.png'
@@ -15,80 +16,84 @@ import Bike3 from './imgVid/productImg/kid-bike.png'
 //Pictures(LOGO)
 import Scott from './imgVid/productImg/scott.png'
 import Specialize from './imgVid/productImg/specialize.png'
+import { valueContainerCSS } from "react-select/dist/declarations/src/components/containers"; */
 
+const URL = 'http://localhost/fiuketesti/index.php';
 
 export default function Carousel1() {
+
+  const [products, setProducts] = useState([]);
+  const [value, setValue] = useState('');
+  
+
+  useEffect(() => {
+    axios.get(URL)
+      .then((response) => {
+        setProducts(response.data);
+        console.log(response.data)
+      }).catch(error => {
+        console.log(error)
+        alert(error);
+      });
+  }, [])
+
+
   return (
     <>
-    <div className="main">
-      <Swiper
-        slidesPerView={4}
-        slidesPerGroup={1}
-        spaceBetween={10}
-        
-        breakpoints={{  
+      <div className="main">
+        <Swiper
+          slidesPerView={4}
+          slidesPerGroup={1}
+          spaceBetween={10}
 
-          481: {
-            slidesPerView: 2,
-            slidesPerGroup:2,
-            spaceBetween: 5
-          },
-          769: {
-            slidesPerView: 4,
-            slidesPerGroup:1,
-            spaceBetween: 10
-          }
+          breakpoints={{
 
-        }}
+            481: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 5
+            },
+            769: {
+              slidesPerView: 4,
+              slidesPerGroup: 1,
+              spaceBetween: 10
+            }
 
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      >
-          <SwiperSlide>
-            <div className="productcard">
-              <img id="plogo" src={Scott} alt="logo" />
-              <h5 className="productname">Tuotenimi</h5>
-              <img className="productimg" src={Bike1} />
-              <p className="productdescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam neque iusto atque at cupiditate illum est explicabo sint nesciunt sit dolorum repudiandae</p>
-              <button className="buybutton">Osta</button>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="productcard">
-              <img id="plogo" src={Specialize} />
-              <h5 className="productname">Tuotenimi</h5>
-              <img className="productimg" src={Bike2} />
-              <p className="productdescription"><ul>
-              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora..</li>
-              <li>--</li>
-              <li>hahmottelu</li>
-              </ul></p>
-              <button className="buybutton">Osta</button>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="productcard">
-              <img id="plogo" src={Scott} alt="logo" />
-              <h5 className="productname">Tuotenimi</h5>
-              <img className="productimg" src={Bike3} />
-              <p className="productdescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam neque iusto atque at cupiditate illum est explicabo sint nesciunt sit dolorum repudiandae</p>
-              <button className="buybutton">Osta</button>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
+          }}
+
+          loop={true}
+          loopFillGroupWithBlank={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {products.map(item => (
+            <SwiperSlide key={item.id}>
+              <div className="productcard">
+                <img id="plogo" src="" alt="logo" /> 
+                <h5 className="productname">{item.tuotenimi}</h5>
+                <img className="productimg" src="#" alt="tuotteen kuva" />
+                <p className="productdescription"></p>
+                <h4 className="value">{item.hinta} €</h4>
+                <button className="buybutton">Osta</button>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>
   );
 }
+
+/* 
+               <div className="productcard">
+                <img id="plogo" src={logo} alt="logo" />
+                <h5 className="productname">{pname}</h5>
+                <img className="productimg" src={pimage} />
+                <p className="productdescription">{description}</p>
+                <h4 className="value">{value}</h4>
+                <button className="buybutton">Osta</button>
+              </div> */

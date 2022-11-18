@@ -74,17 +74,17 @@ body {
 /*----------- Tuotekortti --------------*/
 
 .productcard {
-  position: relative;
+  position: absolute;
   width: 100%;
 }
 
-#plogo {    
+#plogo { 
+  position: relative;   
   width: 125px;
  }
 
 .productname{
-  position: absolute;
-  margin-top: 100px;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
@@ -94,18 +94,18 @@ body {
 }
 
 .productimg {
+  position: relative;
   padding: 20px;
   opacity: 0.95;
 }
 
 .productdescription {
+  position: relative;
   margin-top: 10px;
   padding: 10px;
 }
 
 .buybutton {
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 5px;
+  position: relative;
   border-radius: 5px;
 }
