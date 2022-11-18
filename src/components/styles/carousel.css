@@ -71,3 +71,41 @@ body {
   color: red; 
 }
 
+/*----------- Tuotekortti --------------*/
+
+.productcard {
+  position: relative;
+  width: 100%;
+}
+
+#plogo {    
+  width: 125px;
+ }
+
+.productname{
+  position: absolute;
+  margin-top: 100px;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.productimg {
+  padding: 20px;
+  opacity: 0.95;
+}
+
+.productdescription {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.buybutton {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

@@ -1,25 +1,28 @@
 import React, { useRef, useState } from "react";
-//Pictures
-import Bike from './imgVid/productImg/bicycle1.png'
-import Cyclist from './imgVid/productImg/cyclist.png'
-// Import Swiper React components
+import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+//Styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "./styles/carousel.css";  // tuote css muokkaus
 
-import "./styles/carousel.css";
+//Pictures(BIKE)
+import Bike1 from './imgVid/productImg/bicycle1.png';
+import Bike2 from './imgVid/productImg/cyclist.png';
+import Bike3 from './imgVid/productImg/kid-bike.png'
 
-// import required modules
-import { Pagination, Navigation } from "swiper";
+//Pictures(LOGO)
+import Scott from './imgVid/productImg/scott.png'
+import Specialize from './imgVid/productImg/specialize.png'
+
 
 export default function Carousel1() {
   return (
     <>
     <div className="main">
       <Swiper
-        slidesPerView={5}
+        slidesPerView={4}
         slidesPerGroup={1}
         spaceBetween={10}
         
@@ -31,7 +34,7 @@ export default function Carousel1() {
             spaceBetween: 5
           },
           769: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             slidesPerGroup:1,
             spaceBetween: 10
           }
@@ -47,16 +50,44 @@ export default function Carousel1() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><a><img src={Bike} /></a></SwiperSlide>
-        <SwiperSlide>Sasa</SwiperSlide>
-        <SwiperSlide>Juha</SwiperSlide>
-        <SwiperSlide> <p>ERILAINEN1</p> <a><img src={Cyclist} /></a> </SwiperSlide>
-        <SwiperSlide>Ville</SwiperSlide>
-        <SwiperSlide>Mika</SwiperSlide>
-        <SwiperSlide>????</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
+          <SwiperSlide>
+            <div className="productcard">
+              <img id="plogo" src={Scott} alt="logo" />
+              <h5 className="productname">Tuotenimi</h5>
+              <img className="productimg" src={Bike1} />
+              <p className="productdescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam neque iusto atque at cupiditate illum est explicabo sint nesciunt sit dolorum repudiandae</p>
+              <button className="buybutton">Osta</button>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="productcard">
+              <img id="plogo" src={Specialize} />
+              <h5 className="productname">Tuotenimi</h5>
+              <img className="productimg" src={Bike2} />
+              <p className="productdescription"><ul>
+              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora..</li>
+              <li>--</li>
+              <li>hahmottelu</li>
+              </ul></p>
+              <button className="buybutton">Osta</button>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="productcard">
+              <img id="plogo" src={Scott} alt="logo" />
+              <h5 className="productname">Tuotenimi</h5>
+              <img className="productimg" src={Bike3} />
+              <p className="productdescription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati numquam neque iusto atque at cupiditate illum est explicabo sint nesciunt sit dolorum repudiandae</p>
+              <button className="buybutton">Osta</button>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+        </Swiper>
       </div>
     </>
   );
