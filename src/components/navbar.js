@@ -24,6 +24,7 @@ export default function Navbar(props) {
             <li className="nav-item"><Link className="nav-link" to="/components/pages/maantiepyorat">Maantiepyörät</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/components/pages/maastopyorat">Maastopyörät</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/components/pages/sahkopyorat">Sähköpyörät</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/components/pages/admin">Admin</Link></li>
           </ul>
           <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
         </div>

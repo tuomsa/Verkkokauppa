@@ -56,13 +56,6 @@ body {
   object-fit: cover;
 }
 
-.swiper-slide h1 {   /* Headeri */
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  margin-top: 15px;
-}
-
 .swiper-button-prev {
   color: red;
 }
@@ -75,6 +68,7 @@ body {
 
 .productcard {
   position: absolute;
+  top: 0;
   width: 100%;
 }
 

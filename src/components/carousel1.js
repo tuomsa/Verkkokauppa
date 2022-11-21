@@ -8,22 +8,20 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./styles/carousel.css";  // tuote css muokkaus
 
-/*Pictures(BIKE)
+//Pictures(BIKE)
 import Bike1 from './imgVid/productImg/bicycle1.png';
 import Bike2 from './imgVid/productImg/cyclist.png';
-import Bike3 from './imgVid/productImg/kid-bike.png'
+import Bike3 from './imgVid/productImg/kid-bike.png';
 
 //Pictures(LOGO)
-import Scott from './imgVid/productImg/scott.png'
-import Specialize from './imgVid/productImg/specialize.png'
-import { valueContainerCSS } from "react-select/dist/declarations/src/components/containers"; */
+import Scott from './imgVid/productImg/scott.png';
+import Specialize from './imgVid/productImg/specialize.png';
 
-const URL = 'http://localhost/fiuketesti/index.php';
+const URL = 'http://localhost/fiuketesti/tuote.php';
 
-export default function Carousel1() {
+export default function Carousel1 () {
 
   const [products, setProducts] = useState([]);
-  const [value, setValue] = useState('');
   
 
   useEffect(() => {
@@ -73,7 +71,7 @@ export default function Carousel1() {
           {products.map(item => (
             <SwiperSlide key={item.id}>
               <div className="productcard">
-                <img id="plogo" src="" alt="logo" /> 
+                <img id="plogo" src={Scott} alt="logo" /> 
                 <h5 className="productname">{item.tuotenimi}</h5>
                 <img className="productimg" src="#" alt="tuotteen kuva" />
                 <p className="productdescription"></p>
@@ -88,12 +86,3 @@ export default function Carousel1() {
   );
 }
 
-/* 
-               <div className="productcard">
-                <img id="plogo" src={logo} alt="logo" />
-                <h5 className="productname">{pname}</h5>
-                <img className="productimg" src={pimage} />
-                <p className="productdescription">{description}</p>
-                <h4 className="value">{value}</h4>
-                <button className="buybutton">Osta</button>
-              </div> */

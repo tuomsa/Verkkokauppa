@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Maantiepyorat from './components/pages/maantiepyorat';
 import Maastopyorat from './components/pages/maastopyorat';
 import NotFound from './components/pages/NotFound'
+import Admin from './components/pages/admin';
 
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
@@ -32,6 +33,7 @@ function App() {
             <Route path='/components/pages/maantiepyorat' element={<Maantiepyorat />} />
             <Route path='/components/pages/maastopyorat' element={<Maastopyorat />} />
             <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat />} />
+            <Route path='/components/pages/admin' element={<Admin />} />        {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>

@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+}
+
+.table {
+  background: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.table th, table tr , table td{
+  border: 1px solid black;
+  
+}
+
+
+
