@@ -1,4 +1,7 @@
 .content {
-  height: 800px;
+  max-height: 700px;
+  min-height: 510px;
   text-align: center;
+  color: white;
 }
+
