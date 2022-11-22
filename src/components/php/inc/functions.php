@@ -1,7 +1,7 @@
 <?php
 function openDb()
 {
-  $db = new PDO('mysql:host=localhost;dbname=fiuketesti;charset=utf8', 'root', '');  // kohta johon tarvii laittaa OIKEA oman tietokannan nimi dbname
+  $db = new PDO('mysql:host=localhost;dbname=fiuke;charset=utf8', 'root', '');  // kohta johon tarvii laittaa OIKEA oman tietokannan nimi dbname
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   return $db;
 }

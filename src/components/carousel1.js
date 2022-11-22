@@ -17,7 +17,7 @@ import Bike3 from './imgVid/productImg/kid-bike.png';
 import Scott from './imgVid/productImg/scott.png';
 import Specialize from './imgVid/productImg/specialize.png';
 
-const URL = 'http://localhost/fiuketesti/tuote.php';
+const URL = 'http://localhost/fiuke/tuote.php';
 
 export default function Carousel1 () {
 
@@ -71,10 +71,10 @@ export default function Carousel1 () {
           {products.map(item => (
             <SwiperSlide key={item.id}>
               <div className="productcard">
-                <img id="plogo" src={Scott} alt="logo" /> 
-                <h5 className="productname">{item.tuotenimi}</h5>
+                <img id="plogo" src="" alt={item.merkki} />
+                <h5 className="productname">{item.malli}</h5>
                 <img className="productimg" src="#" alt="tuotteen kuva" />
-                <p className="productdescription"></p>
+                <p className="productdescription">{item.kuvaus}</p>
                 <h4 className="value">{item.hinta} €</h4>
                 <button className="buybutton">Osta</button>
               </div>

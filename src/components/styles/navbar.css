@@ -107,7 +107,12 @@ nav {
   border-radius: 50%;
   font-size: 1.2em;
 }
-
+/* poista tämä adminbtn nappi */
+.adminbtn { 
+  margin-top: 140px;
+  margin-right: 20px;
+  
+}
 @media screen and (max-width: 1750px) {
 
   #navbarSupportedContent {

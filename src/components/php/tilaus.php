@@ -4,7 +4,7 @@ require_once 'inc/headers.php';
 
 try {
   $db = openDb();
-  $sql="select * FROM asiakas";               //Tähän kohtaan pitää muuttaa mistä taulusta haetaan!
+  $sql="select * FROM tilaus";               //Tähän kohtaan pitää muuttaa mistä taulusta haetaan!
   $query = $db->query($sql);
   $results = $query->fetchAll(PDO::FETCH_ASSOC);
   $json = json_encode($results,JSON_PRETTY_PRINT);
@@ -15,6 +15,3 @@ try {
   $error = array('error'=>$pdoex->getMessage());    
   echo json_encode($error);                        
 }
-
-
-

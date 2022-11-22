@@ -5,3 +5,20 @@
   color: white;
 }
 
+
+.profile {
+  position: relative;
+  display: inline-block;
+  background: red;
+
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+  border: 1px solid white;
+}
+
+.list {
+  margin-left: 0px;
+  list-style-type: none;
+}
