@@ -11,6 +11,7 @@
 .table th, table tr , table td{
   border: 1px solid black; 
 }
+
 .table tr:hover {
   background-color: rgba(247, 5, 5, 0.278);
 }

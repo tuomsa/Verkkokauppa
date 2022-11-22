@@ -69,7 +69,7 @@ export default function Admin () {
             <td>{consumer.postinro}</td>
             <td>{consumer.postitmp}</td>
             <td>{consumer.puhelinnro}</td>
-            <td>{consumer.e_mail}</td>
+            <td>a{consumer.e_mail}</td>
             <td>{consumer.salasana}</td>
             <td><button id="modify" className="editbuttons"></button></td>
             <td><button id="remove" classNAme="editbuttons"></button></td>
