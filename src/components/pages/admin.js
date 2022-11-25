@@ -2,46 +2,40 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/admin.css';
 
-const CONSUMERS_URL = 'http://localhost/fiuke/asiakas.php';
-const PRODUCTS_URL = 'http://localhost/fiuke/tuote.php';
-const ORDERS_URL = 'http://localhost/fiuke/tilaus.php';
 
-export default function Admin() {
+export default function Admin(props) {
 
   const [consumers, setConsumers] = useState([]);
   const [products, setProducts] = useState([]);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get(CONSUMERS_URL)
+    axios.get(props.url + '/asiakas.php')
       .then((response) => {
         setConsumers(response.data);
         console.log(response.data)
       }).catch(error => {
-        console.log(error)
-        alert(error);
+        console.log(error.response.data)
       });
   }, [])
 
   useEffect(() => {
-    axios.get(PRODUCTS_URL)
+    axios.get(props.url + '/tuote.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)
       }).catch(error => {
-        console.log(error)
-        alert(error);
+        console.log(error.response.data)       
       });
   }, [])
 
   useEffect(() => {
-    axios.get(ORDERS_URL)
+    axios.get(props.url+ 'tilaus.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)
       }).catch(error => {
-        console.log(error)
-        alert(error);
+        console.log(error.response.data)      
       });
   }, [])
 
@@ -94,8 +88,8 @@ export default function Admin() {
           <tr key={product.id}>
             <td>{product.tuotenro}</td>
             <td>{product.trnro}</td>
-            <td>{product.merkki}</td>
-            <td>{product.malli}</td>
+            <td>{product.tuotemerkki}</td>
+            <td>{product.tuotemalli}</td>
             <td>{product.hinta}</td>
             <td>{product.kustannus}</td>
             <td>{product.kuvaus}</td>

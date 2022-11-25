@@ -39,7 +39,7 @@ function App() {
             <Route path='/components/pages/maantiepyorat' element={<Maantiepyorat url = {URL}/>} />
             <Route path='/components/pages/maastopyorat' element={<Maastopyorat url = {URL}/>} />
             <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat url = {URL}/>} />
-            <Route path='/components/pages/admin' element={<Admin />} />        {/*testi,poista rivi*/}
+            <Route path='/components/pages/admin' element={<Admin url= {URL} />} />        {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
