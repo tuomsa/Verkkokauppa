@@ -20,6 +20,7 @@
   background-color: rgb(113, 101, 94);
   color: white; 
 }
+
 tr:nth-child(2n) {
   background-color: beige;
 }

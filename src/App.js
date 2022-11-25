@@ -7,7 +7,7 @@ import Maantiepyorat from './components/pages/maantiepyora';
 import Maastopyorat from './components/pages/maastopyorat';
 import Sahkopyorat from './components/pages/sahkopyorat';
 import NotFound from './components/pages/NotFound'
-import Admin from './components/pages/admin';
+import Admin from './components/pages/admin/admin';
 
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';

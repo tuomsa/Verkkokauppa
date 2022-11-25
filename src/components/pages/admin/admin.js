@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import '../styles/admin.css';
+import '../../styles/admin.css';
 
 
 export default function Admin(props) {
@@ -98,7 +98,7 @@ export default function Admin(props) {
           </tr>
         ))}
       </table>
-
+      
       <h2 style={{ color: "white" }} className="tableheader">Tilaukset</h2>
       <table className="table">
         <tr className="titles">
