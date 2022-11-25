@@ -3,22 +3,9 @@ form {
     background-repeat: no-repeat;
     background-size: contain;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
-.popup {
-    position: absolute;
-    display: inline-block;
-    font-family: inherit;
-    border-radius: 5px;
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.4em;
-    top: 68px;
-    right: 140px;
     z-index: 99;
 }
+
 .logintxt{
     font-size: 1.2em;
 }

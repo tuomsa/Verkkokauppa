@@ -6,11 +6,11 @@ const CONSUMERS_URL = 'http://localhost/fiuke/asiakas.php';
 const PRODUCTS_URL = 'http://localhost/fiuke/tuote.php';
 const ORDERS_URL = 'http://localhost/fiuke/tilaus.php';
 
-export default function Admin () {
+export default function Admin() {
 
-  const[consumers, setConsumers] = useState([]);
-  const[products, setProducts] = useState([]);
-  const[orders, setOrders] = useState([]);
+  const [consumers, setConsumers] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     axios.get(CONSUMERS_URL)
@@ -47,7 +47,7 @@ export default function Admin () {
 
   return (
     <div className="container">
-      <h2 style={{color: "white"}} className="tableheader">Asiakkaat</h2>
+      <h2 style={{ color: "white" }} className="tableheader">Asiakkaat</h2>
       <table className="table">
         <tr className="titles">
           <th>Asiakastunnus</th>
@@ -76,8 +76,8 @@ export default function Admin () {
           </tr>
         ))}
       </table>
-      
-      <h2 style={{color: "white"}} className="tableheader">Tuotteet</h2>
+
+      <h2 style={{ color: "white" }} className="tableheader">Tuotteet</h2>
       <table className="table">
         <tr className="titles">
           <th>Tuotenumero</th>
@@ -105,7 +105,7 @@ export default function Admin () {
         ))}
       </table>
 
-      <h2 style={{color: "white"}} className="tableheader">Tilaukset</h2>
+      <h2 style={{ color: "white" }} className="tableheader">Tilaukset</h2>
       <table className="table">
         <tr className="titles">
           <th>Tilausnumero</th>
@@ -127,7 +127,7 @@ export default function Admin () {
             <td><button id="remove" classNAme="editbuttons"></button></td>
           </tr>
         ))}
-        </table>
+      </table>
     </div>
   )
 }

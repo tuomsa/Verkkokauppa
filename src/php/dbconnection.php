@@ -8,7 +8,7 @@ function createDbConnection(){
     $pw = $ini["pw"];
 
     try{
-        $dbcon = new PDO("mysql:host=$host;dbname=$dbname", $username, $pw);
+        $dbcon = new PDO("mysql:host=$host;port=3000;dbname=$dbname;charset=utf8", $username, $pw);
         return $dbcon;
     }catch(PDOException $e){
         echo $e->getMessage();

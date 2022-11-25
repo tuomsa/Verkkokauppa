@@ -9,3 +9,9 @@
   .container {
     margin-top: 50px;
   }
+
+  #logo {
+    position: absolute;
+    height: 120px;
+    z-index: 99;
+  }

@@ -17,7 +17,7 @@ export default function PopUp(props) {
 
     return (
       <div className="popup">
-        <button className="loginBtn" onClick={() => setButtonPopup(true)}><p className="logintxt">Kirjaudu sisään / Rekisteröidy</p><img className="loginImg" src={loginIcon}/></button>
+        <button className="loginBtn" onClick={() => setButtonPopup(true)}><p className="logintxt">Kirjaudu</p><img className="loginImg" src={loginIcon}/></button>
 
         <Login trigger={buttonPopUp} setTrigger={setButtonPopup}>
 

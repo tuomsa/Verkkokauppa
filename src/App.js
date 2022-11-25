@@ -11,7 +11,10 @@ import Admin from './components/pages/admin';
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
 import Sahkopyorat from './components/pages/sahkopyorat';
+import Logo from "./components/imgVid/logo.png"
 import './App.css';
+
+const URL = 'http://localhost/fiuke/';
 
 function App() {
 
@@ -21,7 +24,9 @@ function App() {
   return (
     <>
       <div className='App'>
+      <img id="logo" src={Logo} alt="logo" />
         <Navbar
+          url ={URL}
           loggedIn={loggedIn}
           setLoggedIn={setLoggedIn}
           userName={userName}

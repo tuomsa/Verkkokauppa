@@ -1,10 +1,8 @@
 .content {
-  max-height: 700px;
-  min-height: 510px;
+  min-height: 780px;
   text-align: center;
   color: white;
 }
-
 
 .profile {
   position: relative;

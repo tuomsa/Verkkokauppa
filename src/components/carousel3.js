@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 //Pictures
-import Bike from './imgVid/productImg/bicycle1.png'
-import Cyclist from './imgVid/productImg/cyclist.png'
-import KidBike from './imgVid/productImg/kid-bike.png'
+import Bike from './productImg/bicycle1.png'
+import Cyclist from './productImg/cyclist.png'
+import KidBike from './productImg/kid-bike.png'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 

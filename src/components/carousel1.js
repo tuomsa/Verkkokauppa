@@ -8,21 +8,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./styles/carousel.css";  // tuote css muokkaus
 
-//Pictures(BIKE)
-import Bike1 from './imgVid/productImg/bicycle1.png';
-import Bike2 from './imgVid/productImg/cyclist.png';
-import Bike3 from './imgVid/productImg/kid-bike.png';
-
-//Pictures(LOGO)
-import Scott from './imgVid/productImg/scott.png';
-import Specialize from './imgVid/productImg/specialize.png';
+import Specialized from './productImg/Specialized.png';
+import Bike1 from './productImg/1specialized_chisel.png';
 
 const URL = 'http://localhost/fiuke/tuote.php';
 
 export default function Carousel1 () {
 
   const [products, setProducts] = useState([]);
-  
 
   useEffect(() => {
     axios.get(URL)
@@ -71,9 +64,9 @@ export default function Carousel1 () {
           {products.map(item => (
             <SwiperSlide key={item.id}>
               <div className="productcard">
-                <img id="plogo" src="" alt={item.merkki} />
-                <h5 className="productname">{item.malli}</h5>
-                <img className="productimg" src="#" alt="tuotteen kuva" />
+                <img id="plogo" src={'/components/productImg/' + item.tuotemerkki + ".png"} />
+                <h5 className="productname">{item.tuotemalli}</h5>
+                <img className="productimg" src={item.kuva} alt="" />
                 <p className="productdescription">{item.kuvaus}</p>
                 <h4 className="value">{item.hinta} €</h4>
                 <button className="buybutton">Osta</button>
