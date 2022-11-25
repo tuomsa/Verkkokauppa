@@ -6,24 +6,21 @@ import axios from "axios";
 //Styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "./styles/carousel.css";  // tuote css muokkaus
+import "swiper/css/pagination";
+import "../styles/carousel.css";
 
-import Specialized from './productImg/Specialized.png';
-import Bike1 from './productImg/1specialized_chisel.png';
 
-const URL = 'http://localhost/fiuke/tuote.php';
-
-export default function Carousel1 () {
+export default function Maantiepyorat(props) {
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(URL)
+    axios.get(props.url + '/maantiepyora.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)
       }).catch(error => {
-        console.log(error)
+        console.log(error.response.data)
         alert(error);
       });
   }, [])
@@ -32,6 +29,7 @@ export default function Carousel1 () {
   return (
     <>
       <div className="main">
+        <h1 id="header">Maantiepyörät</h1>
         <Swiper
           slidesPerView={4}
           slidesPerGroup={1}
@@ -61,6 +59,7 @@ export default function Carousel1 () {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
+
           {products.map(item => (
             <SwiperSlide key={item.id}>
               <div className="productcard">

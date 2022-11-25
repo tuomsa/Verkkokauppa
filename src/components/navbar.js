@@ -14,7 +14,7 @@ export default function Navbar(props) {
 
 
   useEffect(() => {
-    axios.get(props.url +'/dropnavindex.php')
+    axios.get(props.url +'/getmodel.php')
       .then((response) => {
         setHeaders(response.data);
         console.log(response.data)

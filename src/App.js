@@ -3,16 +3,17 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/navbar';
 
 import Home from './components/pages/Home';
-import Maantiepyorat from './components/pages/maantiepyorat';
+import Maantiepyorat from './components/pages/maantiepyora';
 import Maastopyorat from './components/pages/maastopyorat';
+import Sahkopyorat from './components/pages/sahkopyorat';
 import NotFound from './components/pages/NotFound'
 import Admin from './components/pages/admin';
 
 import ScrollToTop from './components/scrollTop';
 import Footer from './components/footer';
-import Sahkopyorat from './components/pages/sahkopyorat';
 import Logo from "./components/imgVid/logo.png"
 import './App.css';
+
 
 const URL = 'http://localhost/fiuke/';
 
@@ -24,9 +25,9 @@ function App() {
   return (
     <>
       <div className='App'>
-      <img id="logo" src={Logo} alt="logo" />
+        <img id="logo" src={Logo} alt="logo" />
         <Navbar
-          url ={URL}
+          url={URL}
           loggedIn={loggedIn}
           setLoggedIn={setLoggedIn}
           userName={userName}
@@ -35,9 +36,9 @@ function App() {
         <div className='container'>
           <Routes>
             <Route path='/components/pages/Home' element={<Home />} />
-            <Route path='/components/pages/maantiepyorat' element={<Maantiepyorat />} />
-            <Route path='/components/pages/maastopyorat' element={<Maastopyorat />} />
-            <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat />} />
+            <Route path='/components/pages/maantiepyorat' element={<Maantiepyorat url = {URL}/>} />
+            <Route path='/components/pages/maastopyorat' element={<Maastopyorat url = {URL}/>} />
+            <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat url = {URL}/>} />
             <Route path='/components/pages/admin' element={<Admin />} />        {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
           </Routes>
