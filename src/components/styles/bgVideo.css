@@ -6,8 +6,10 @@
   margin-right: -50vw;
   max-width: 100vw;
   width: 100vw;
-  filter: grayscale(30%)
-  opacity(0.8)
+  filter: grayscale(30%);
+  opacity: 0.8;
+  z-index: -6;
+  
 }
 
 @media screen and (max-width: 600px) {
