@@ -3,12 +3,13 @@
     align-items: center;
     margin: auto;
     position: relative;
-    background-color: gray;
+    background-image: url("./components/imgVid/darkbg.jpg");
+    background-repeat: no-repeat;
   }
 
   #logo {
     position: absolute;
-    margin:15px;
+    margin: 15px;
     height: 180px;
     z-index: 3;
   }

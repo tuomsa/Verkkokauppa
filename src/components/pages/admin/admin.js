@@ -8,6 +8,7 @@ export default function Admin(props) {
   const [consumers, setConsumers] = useState([]);
   const [products, setProducts] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [categorys, setCategory] = useState([]);
 
   useEffect(() => {
     axios.get(props.url + '/asiakas.php')
@@ -36,6 +37,16 @@ export default function Admin(props) {
         console.log(response.data)
       }).catch(error => {
         console.log(error.response.data)      
+      });
+  }, [])
+
+  useEffect(() => {
+    axios.get(props.url + '/tuoteryhma.php')
+      .then((response) => {
+        setCategory(response.data);
+        console.log(response.data)
+      }).catch(error => {
+        console.log(error.response.data)       
       });
   }, [])
 
@@ -117,6 +128,26 @@ export default function Admin(props) {
             <td>{order.tilauspvm}</td>
             <td>{order.tuotenro}</td>
             <td>{order.kpl}</td>
+            <td><button id="modify" className="editbuttons"></button></td>
+            <td><button id="remove" classNAme="editbuttons"></button></td>
+          </tr>
+        ))}
+      </table>
+      
+      <h2 style={{ color: "white" }} className="tableheader">Tuoteryhmät</h2>
+      <table className="table">
+        <tr className="titles">
+          <th>Tuotenumero</th>
+          <th>Tyyppi</th>
+          <th>Malli</th>
+          <th>Muokkaa</th>
+          <th>Poista</th>
+        </tr>
+        {categorys.map(category => (
+          <tr key={category.id}>
+            <td>{category.trnro}</td>
+            <td>{category.tyyppi}</td>
+            <td>{category.malli}</td>
             <td><button id="modify" className="editbuttons"></button></td>
             <td><button id="remove" classNAme="editbuttons"></button></td>
           </tr>

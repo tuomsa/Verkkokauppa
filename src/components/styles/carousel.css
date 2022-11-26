@@ -70,12 +70,13 @@ body {
   top: 0;
   width: 100%;
 }
-
 #plogo {
-  position: relative;
-  width: 125px;
+  margin-top: 10px;
+  width: 70%;
 }
-
+#bikepicture {
+  height: 50px;
+}
 .productname {
   position: relative;
   top: 0;
@@ -89,7 +90,6 @@ body {
 .productimg {
   position: relative;
   padding: 20px;
-  opacity: 0.95;
 }
 
 .productdescription {

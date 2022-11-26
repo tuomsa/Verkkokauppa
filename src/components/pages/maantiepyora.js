@@ -62,10 +62,10 @@ export default function Maantiepyorat(props) {
 
           {products.map(item => (
             <SwiperSlide key={item.id}>
-              <div className="productcard">
-                <img id="plogo" src={'/components/productImg/' + item.tuotemerkki + ".png"} />
+              <div className="productcard"> 
+                <img id="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli}</h5>
-                <img className="productimg" src={item.kuva} alt="" />
+                <img id="picture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
                 <p className="productdescription">{item.kuvaus}</p>
                 <h4 className="value">{item.hinta} €</h4>
                 <button className="buybutton">Osta</button>

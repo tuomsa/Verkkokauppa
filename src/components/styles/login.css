@@ -49,6 +49,7 @@ form {
     max-width: 640px;
     background-color: #fff;
     border-radius: 5px;
+    z-index: 99;
 }
 
 .login-inner .close-btn {

@@ -1,5 +1,4 @@
 #mainnavbar {
-  background-color: gray;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 ul li {
@@ -23,10 +22,12 @@ ul li {
 
 .dropdown-menu {
   margin-left: 320px;
-  background-color: gray;
+  
+  background-image: url("../imgVid/darkbg.jpg");
 }
 
 .dropdown-item {
+  font-size: 1.3em;
   color: white;
 }
 
