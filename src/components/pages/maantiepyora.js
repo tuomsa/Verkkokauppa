@@ -62,13 +62,16 @@ export default function Maantiepyorat(props) {
 
           {products.map(item => (
             <SwiperSlide key={item.id}>
-              <div className="productcard"> 
-                <img id="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
+              <div className="productcard">
+                <img id="plogo" className="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli}</h5>
-                <img id="picture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
-                <p className="productdescription">{item.kuvaus}</p>
+                <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl"></i></a>
+                <div id="imagecontainer" className="imagecontainer">
+                  <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
+                </div>
+                {/*item.kuvaus} laitetaan Loremin tilalle kun saadaan pyöriin lisättyä tietoja*/}
+                <p className="productdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis asperiores hic, quibusdam accusamus sunt ipsa esse magnam in explicabo recusandae nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi at, animi explicabo quod beatae v</p>
                 <h4 className="value">{item.hinta} €</h4>
-                <button className="buybutton">Osta</button>
               </div>
             </SwiperSlide>
           ))}

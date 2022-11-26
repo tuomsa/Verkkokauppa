@@ -27,9 +27,8 @@ body {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
   background: #fff;
-  height: 55vh;
+  height: 500px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -67,38 +66,69 @@ body {
 
 .productcard {
   position: absolute;
+  display:flow-root;
   top: 0;
   width: 100%;
+
 }
+
 #plogo {
-  margin-top: 10px;
-  width: 70%;
+  margin-top: 3%;
+  width: 150px;
 }
-#bikepicture {
-  height: 50px;
-}
+
 .productname {
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  margin-top: 20%;
   margin-right: auto;
   margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
 }
+.imagecontainer {
+  margin-top: 20%;
+  height: 150px;
+}
+#bikepicture {
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
 
-.productimg {
-  position: relative;
-  padding: 20px;
+  transition: transform .2s ease-out;
+  cursor: pointer;
+}
+
+#bikepicture:hover {
+  display: block;
+  transform: scale(1.6);
 }
 
 .productdescription {
   position: relative;
-  margin-top: 10px;
-  padding: 10px;
+  font-size: 1.1em;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.buybutton {
+.bottomrack {
+ position: relative;
+}
+
+.value {
   position: relative;
-  border-radius: 5px;
+}
+
+#productcart {
+  position: absolute;
+  color: red;
+  margin-top: 25px;
+  margin-left: 40px;
+  transition: transform .2s ease-out;
+  cursor: pointer;
+}
+
+#productcart:hover {
+  transform: scale(1.6);
 }
