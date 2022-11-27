@@ -55,10 +55,22 @@ body {
 }
 
 .swiper-button-prev {
+  position: fixed;
+  top: 60%;
+  left: 25%;
+  margin-top: -100px;  
+  margin-left: -250px;
+
   color: red;
+
 }
 
 .swiper-button-next {
+  position: fixed;
+  top: 60%;
+  right: 11%;
+  margin-top: -100px;  
+  margin-left: -250px;
   color: red;
 }
 

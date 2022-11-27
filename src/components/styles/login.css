@@ -5,14 +5,10 @@ form {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.logintxt{
-    font-size: 1.2em;
-}
-
 .loginBtn {
+    margin-top: 35px;
     background-color: transparent;
     color: white;
-    font-size: 0.8em;
     border: none;
 }
 

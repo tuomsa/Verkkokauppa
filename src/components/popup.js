@@ -2,7 +2,7 @@ import React from "react"
 import "./styles/login.css"
 import Login from "./login"
 import { useState } from "react";
-import loginIcon from "./imgVid/login.png"
+
 
 {/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */}
 
@@ -17,7 +17,7 @@ export default function PopUp(props) {
 
     return (
       <div className="popup">
-        <button className="loginBtn" onClick={() => setButtonPopup(true)}><p className="logintxt">Kirjaudu</p><img className="loginImg" src={loginIcon}/></button>
+        <button className="loginBtn" onClick={() => setButtonPopup(true)}><i class="fa-sharp fa-solid fa-right-to-bracket fa-xl"></i></button>
 
         <Login trigger={buttonPopUp} setTrigger={setButtonPopup}>
 

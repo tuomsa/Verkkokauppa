@@ -5,6 +5,7 @@ import './styles/navbar.css'
 import Popup from './popup';
 import axios from "axios";
 import logout from './imgVid/logout.png';
+import Home from './imgVid/home.png'
 
 
 export default function Navbar(props) {
@@ -31,7 +32,7 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link"><Link id="homelink" to="/components/pages/Home">Home</Link></a>
+            <a className="nav-link"><Link id="homelink" to="/components/pages/Home"><i class="fa-sharp fa-solid fa-house fa-lg"></i></Link></a>
           </li>
           <li className="nav-item-dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
