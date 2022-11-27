@@ -13,18 +13,20 @@ import "../styles/carousel.css";
 export default function Maantiepyorat(props) {
 
   const [products, setProducts] = useState([]);
+  const [Name, setNames] = useState([]);
 
   useEffect(() => {
     axios.get(props.url + '/maantiepyora.php')
       .then((response) => {
         setProducts(response.data);
-        console.log(response.data)
+        console.log(response.data);
       }).catch(error => {
-        console.log(error.response.data)
+        console.log(error.response.data);
         alert(error);
       });
   }, [])
 
+  
 
   return (
     <>
@@ -64,7 +66,7 @@ export default function Maantiepyorat(props) {
             <SwiperSlide key={item.id}>
               <div className="productcard">
                 <img id="plogo" className="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
-                <h5 className="productname">{item.tuotemalli}</h5>
+                <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
                 <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl"></i></a>
                 <div id="imagecontainer" className="imagecontainer">
                   <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
