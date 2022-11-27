@@ -5,6 +5,7 @@
    color: white;
     box-shadow: rgba(0, 0, 0, 0.45) 0px -25px 20px -20px;
     padding-top: 40px;
+    background-color: brown;
 
 }
 
@@ -21,3 +22,10 @@
     padding-top: 100px;
 }
 
+.logo1 { 
+
+    width: 320px;
+    padding: 1%;
+    
+
+}
