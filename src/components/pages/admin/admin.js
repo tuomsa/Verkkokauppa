@@ -1,158 +1,60 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../../styles/admin.css';
+import Tuotelista from "../tuotelista";
 
 
-export default function Admin(props) {
+export default function Admin({url}) {
 
-  const [consumers, setConsumers] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [orders, setOrders] = useState([]);
-  const [categorys, setCategory] = useState([]);
+  const [newCategory, setNewCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [addingCategory, setAddingCategory] = useState(false);
 
-  useEffect(() => {
-    axios.get(props.url + '/asiakas.php')
-      .then((response) => {
-        setConsumers(response.data);
-        console.log(response.data)
-      }).catch(error => {
-        console.log(error.response.data)
-      });
-  }, [])
+  function saveCategory(e) {
+    e.preventDefault();
+    const json = JSON.stringify({tyyppi: newCategory});
+    axios.post(url + '/tuoteryhmaAdd.php', json,{
+      headers: {
+        'Content-Type' : 'application/json'
+      }     
+    })
+    .then((response) => {
+      setNewCategory('');
+      setAddingCategory(false);
+      setSelectedCategory(response.data);
+    }).catch(error => {
+      console.log(error.response.data);
+    });
+  }
 
-  useEffect(() => {
-    axios.get(props.url + '/tuote.php')
-      .then((response) => {
-        setProducts(response.data);
-        console.log(response.data)
-      }).catch(error => {
-        console.log(error.response.data)       
-      });
-  }, [])
-
-  useEffect(() => {
-    axios.get(props.url+ 'tilaus.php')
-      .then((response) => {
-        setProducts(response.data);
-        console.log(response.data)
-      }).catch(error => {
-        console.log(error.response.data)      
-      });
-  }, [])
-
-  useEffect(() => {
-    axios.get(props.url + '/tuoteryhma.php')
-      .then((response) => {
-        setCategory(response.data);
-        console.log(response.data)
-      }).catch(error => {
-        console.log(error.response.data)       
-      });
-  }, [])
-
-  return (
-    <div className="container">
-      <h2 style={{ color: "white" }} className="tableheader">Asiakkaat</h2>
-      <table className="table">
-        <tr className="titles">
-          <th>Asiakastunnus</th>
-          <th>Asiakasnimi</th>
-          <th>Osoite</th>
-          <th>Postinumero</th>
-          <th>Paikkakunta</th>
-          <th>Puhelinnumero</th>
-          <th>Sähköposti</th>
-          <th>Salasana</th>
-          <th>Muokkaa</th>
-          <th>Poista</th>
-        </tr>
-        {consumers.map(consumer => (
-          <tr key={consumer.id}>
-            <td>{consumer.astunnus}</td>
-            <td>{consumer.asnimi}</td>
-            <td>{consumer.osoite}</td>
-            <td>{consumer.postinro}</td>
-            <td>{consumer.postitmp}</td>
-            <td>{consumer.puhelinnro}</td>
-            <td>a{consumer.e_mail}</td>
-            <td>{consumer.salasana}</td>
-            <td><button id="modify" className="editbuttons"></button></td>
-            <td><button id="remove" classNAme="editbuttons"></button></td>
-          </tr>
-        ))}
-      </table>
-
-      <h2 style={{ color: "white" }} className="tableheader">Tuotteet</h2>
-      <table className="table">
-        <tr className="titles">
-          <th>Tuotenumero</th>
-          <th>Tuoteryhmä</th>
-          <th>Merkki</th>
-          <th>Malli</th>
-          <th>Hinta</th>
-          <th>Kustannus</th>
-          <th>Kuvaus</th>
-          <th>Muokkaa</th>
-          <th>Poista</th>
-        </tr>
-        {products.map(product => (
-          <tr key={product.id}>
-            <td>{product.tuotenro}</td>
-            <td>{product.trnro}</td>
-            <td>{product.tuotemerkki}</td>
-            <td>{product.tuotemalli}</td>
-            <td>{product.hinta}</td>
-            <td>{product.kustannus}</td>
-            <td>{product.kuvaus}</td>
-            <td><button id="modify" className="editbuttons"></button></td>
-            <td><button id="remove" classNAme="editbuttons"></button></td>
-          </tr>
-        ))}
-      </table>
-      
-      <h2 style={{ color: "white" }} className="tableheader">Tilaukset</h2>
-      <table className="table">
-        <tr className="titles">
-          <th>Tilausnumero</th>
-          <th>Asiakastunnus</th>
-          <th>Tilauspäivä</th>
-          <th>Tuotenumero</th>
-          <th>kpl</th>
-          <th>Muokkaa</th>
-          <th>Poista</th>
-        </tr>
-        {orders.map(order => (
-          <tr key={order.id}>
-            <td>{order.tilausnro}</td>
-            <td>{order.astunnus}</td>
-            <td>{order.tilauspvm}</td>
-            <td>{order.tuotenro}</td>
-            <td>{order.kpl}</td>
-            <td><button id="modify" className="editbuttons"></button></td>
-            <td><button id="remove" classNAme="editbuttons"></button></td>
-          </tr>
-        ))}
-      </table>
-      
-      <h2 style={{ color: "white" }} className="tableheader">Tuoteryhmät</h2>
-      <table className="table">
-        <tr className="titles">
-          <th>Tuotenumero</th>
-          <th>Tyyppi</th>
-          <th>Malli</th>
-          <th>Muokkaa</th>
-          <th>Poista</th>
-        </tr>
-        {categorys.map(category => (
-          <tr key={category.id}>
-            <td>{category.trnro}</td>
-            <td>{category.tyyppi}</td>
-            <td>{category.malli}</td>
-            <td><button id="modify" className="editbuttons"></button></td>
-            <td><button id="remove" classNAme="editbuttons"></button></td>
-          </tr>
-        ))}
-      </table>
-    </div>
-  )
+  if (!addingCategory) {
+    return (
+      <>
+        <h3>Tuoteryhmien järjestely</h3>
+        <div>
+          <label>Tuoteryhmät</label>
+          <Tuotelista
+            url={url}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+          <button className="btn btn-dark" type="button" onClick={() => setAddingCategory(true)}>Lisää</button>
+        </div>
+      </>
+    )
+  } else {
+    return (
+    <>
+    <h3>Lisää uusi Tuoteryhmä</h3>
+    <form onSubmit={saveCategory}>
+      <div>
+        <label>Tuoteryhmän nimi</label>
+        <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
+        </div>
+        <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
+        <button type="submit">Tallenna</button>
+    </form>
+    </>
+    )
+  }
 }

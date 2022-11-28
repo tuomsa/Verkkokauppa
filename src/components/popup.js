@@ -17,7 +17,7 @@ export default function PopUp(props) {
 
     return (
       <div className="popup">
-        <button className="loginBtn" onClick={() => setButtonPopup(true)}><i class="fa-sharp fa-solid fa-right-to-bracket fa-xl"></i></button>
+        <button className="loginBtn" onClick={() => setButtonPopup(true)}><i className="fa-sharp fa-solid fa-right-to-bracket fa-xl"></i></button>
 
         <Login trigger={buttonPopUp} setTrigger={setButtonPopup}>
 

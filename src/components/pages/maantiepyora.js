@@ -13,7 +13,6 @@ import "../styles/carousel.css";
 export default function Maantiepyorat(props) {
 
   const [products, setProducts] = useState([]);
-  const [Name, setNames] = useState([]);
 
   useEffect(() => {
     axios.get(props.url + '/maantiepyora.php')

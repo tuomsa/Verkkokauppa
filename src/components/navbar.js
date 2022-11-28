@@ -32,7 +32,7 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link"><Link id="homelink" to="/components/pages/Home"><i class="fa-sharp fa-solid fa-house fa-lg"></i></Link></a>
+            <a className="nav-link"><Link id="homelink" to="/components/pages/Home"><i className="fa-sharp fa-solid fa-house fa-lg"></i></Link></a>
           </li>
           <li className="nav-item-dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
@@ -57,7 +57,7 @@ export default function Navbar(props) {
           {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         </div>
       </div>
-      <Link to="/components/pages/admin"><button className="adminbtn">Admin</button></Link>
+      
     </nav>
   )
 }

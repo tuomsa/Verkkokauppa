@@ -1,8 +1,12 @@
-.container {
-  text-align: center;
-}
 
-.table {
+
+
+
+
+
+
+/*
+.table {  
   background: white;
   text-align: center;
   font-size: 1.1em;
@@ -51,3 +55,4 @@ tr:nth-child(2n) {
 #modify:hover, #remove:hover {
   margin-left: 10px;
 }
+*/
