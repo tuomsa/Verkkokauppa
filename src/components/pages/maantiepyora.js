@@ -72,7 +72,7 @@ export default function Maantiepyorat(props) {
                   <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
                 {/*item.kuvaus} laitetaan Loremin tilalle kun saadaan pyöriin lisättyä tietoja*/}
-                <p className="productdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis asperiores hic, quibusdam accusamus sunt ipsa esse magnam in explicabo recusandae nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi at, animi explicabo quod beatae v</p>
+                <p className="productdescription">{item.kuvaus}</p>
                 <h4 className="value">{item.hinta} €</h4>
               </div>
             </SwiperSlide>
