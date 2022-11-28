@@ -30,19 +30,20 @@ function App() {
    }, [])
 
   function addToCart(product) {
-    if (cart.some(item => item.id === product.id)) {
-      const existingProduct = cart.filter(item => item.id ===product.id);
-      updateAmount(parseInt(existingProduct[0].amount) + 1,product);
+    if (cart.some(item => item.tuotenro === product.tuotenro)){
+      const existproduct = cart.filter(item => item.tuotenro === product.tuotenro);
+      updateAmount(parseInt(existproduct[0].amount)+1,product);
     } else {
-      product['amount'] = 1;
-      const newCart = [...cart,product];
-      setCart(newCart);
-      localStorage.setItem('cart',JSON.stringify(newCart));
-    }
+    product['amount'] = 1;
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(newCart)); 
   }
+  }
+
   function updateAmount(amount,product) {
     product.amount = amount;
-    const index = cart.findIndex((item => item.id === product.id));
+    const index = cart.findIndex((item => item.tuotenro === product.tuotenro));
     const modifiedCart = Object.assign([...cart],{[index]: product});
     setCart(modifiedCart);
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
