@@ -63,7 +63,7 @@ export default function Sahkopyorat(props) {
               <div className="productcard">
                 <img id="plogo" className="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
-                <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl"></i></a>
+                <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl" onClick={e => props.addToCart(item)}></i></a>
                 <div id="imagecontainer" className="imagecontainer">
                   <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
