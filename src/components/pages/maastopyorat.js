@@ -67,9 +67,10 @@ export default function Maastopyorat(props) {
                 <div id="imagecontainer" className="imagecontainer">
                   <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
-                {/*item.kuvaus} laitetaan Loremin tilalle kun saadaan pyöriin lisättyä tietoja*/}
-                <p className="productdescription">{item.kuvaus}</p>
-                <h4 className="value">{item.hinta} €</h4>
+                <div className="productdescription">
+                <p className="producttxt">{item.kuvaus}</p>
+                </div>
+                <h4 className="value">{parseInt(item.hinta)} €</h4>
               </div>
             </SwiperSlide>
           ))}

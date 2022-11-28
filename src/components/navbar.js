@@ -57,7 +57,7 @@ export default function Navbar(props) {
           {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         </div>
       </div>
-      
+  
     </nav>
   )
 }
