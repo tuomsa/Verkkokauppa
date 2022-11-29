@@ -16,7 +16,7 @@ export default function Admin({url}) {
   function saveProductCategory(e) {
     e.preventDefault();
     const json = JSON.stringify({tyyppi: newCategory});
-    axios.post(url + '/tuoteryhmaAdd.php', json,{
+    axios.post(url + 'tuoteryhmaAdd.php', json,{
       headers: {
         'Content-Type' : 'application/json'
       }     
