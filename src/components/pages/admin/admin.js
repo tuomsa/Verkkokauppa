@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
 import axios from "axios";
 import '../../styles/admin.css';
 import Tuoteryhmat from "./tuoteryhmat";
@@ -24,7 +23,7 @@ export default function Admin({url}) {
     .then((response) => {
       setNewCategory('');
       setAddingCategory(false);
-      setSelectedCategory(response.data)
+      setSelectedCategory(response.data);
     }).catch(error => {
       console.log(error.response.data);
     });
