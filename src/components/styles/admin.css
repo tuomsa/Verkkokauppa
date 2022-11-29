@@ -1,3 +1,10 @@
+.productscontainer {
+  margin: 50px;
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: gray;
+  height: 700px;
+}
 
 
 

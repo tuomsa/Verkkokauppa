@@ -57,29 +57,7 @@ export default function Navbar(props) {
           {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         </div>
       </div>
-  
+      <Link to="/components/pages/admin"><button className="adminbtn">Admin</button></Link>
     </nav>
   )
 }
-
-/*
-
-<img id="logo" src={Logo} alt="logo" />
-
-<Link className="nav-link" to="/components/pages/maantiepyorat">Maantiepyörät</Link>
-<Link className="nav-link" to="/components/pages/maastopyorat">Maastopyörät</Link>
-<Link className="nav-link" to="/components/pages/sahkopyorat">Sähköpyörät</Link>
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
