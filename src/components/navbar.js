@@ -11,13 +11,13 @@ import Home from './imgVid/home.png'
 export default function Navbar(props) {
 
   const [search, setSearch] = useState('');
-  const [headers, setHeaders] = useState([]);
+  const [categories, setCategories] = useState([]);
 
 
   useEffect(() => {
     axios.get(props.url +'/getcategories.php')
       .then((response) => {
-        setHeaders(response.data);
+        setCategories(response.data);
         console.log(response.data)
       }).catch(error => {
         alert(error.response === undefined ? error : error.reponse.data.error);
@@ -37,7 +37,7 @@ export default function Navbar(props) {
           <li className="nav-item-dropdown">
             <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
             <ul className="dropdown-menu" aria-labelledby="dropdown01">
-              {headers.map(header => (
+              {categories.map(header => (
                 <li key={header.trnro}>
                   <Link className="dropdown-item" to={'/components/pages/' + header.tyyppi + "pyorat"} >
                     {header.tyyppi + "pyörät"}

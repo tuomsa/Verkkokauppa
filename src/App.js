@@ -64,7 +64,7 @@ function App() {
         
         <div className='container'>
           <Routes>
-            <Route path='/components/pages/Home' element={<Home />} />
+            <Route path='/components/pages/' element={<Home />} />
             <Route path='/components/pages/maantiepyorat' element={<Maantiepyorat url = {URL} addToCart={addToCart}/>} />
             <Route path='/components/pages/maastopyorat' element={<Maastopyorat url = {URL} addToCart={addToCart}/>} />
             <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat url = {URL} addToCart={addToCart}/>} />

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../../styles/admin.css';
-import Tuoteryhmat from "./tuoteryhmat";
+import CategoryList from "./categorylist";
 
 
 
-export default function Admin({url}) {
+export default function ManageCategories({url}) {
 
-  const [seletedCategory, setSelectedCategory]= useState(null)
   const [newCategory, setNewCategory] = useState("");
+  const [selectedCategory, setSelectedCategory]= useState(null);
   const [addingCategory, setAddingCategory] = useState(false);
 
 
-  function saveProductCategory(e) {
+  function saveCategory(e) {
     e.preventDefault();
     const json = JSON.stringify({tyyppi: newCategory});
     axios.post(url + 'tuoteryhmaAdd.php', json,{
@@ -25,7 +25,8 @@ export default function Admin({url}) {
       setAddingCategory(false);
       setSelectedCategory(response.data);
     }).catch(error => {
-      console.log(error.response.data);
+      console.log(error.data.response)
+      alert(error.response === undefined ? error : error.response.data.error);
     });
   }
 
@@ -34,10 +35,10 @@ export default function Admin({url}) {
       <>
         <div className="productscontainer">
           <label><h2>Tuoteryhmien järjestely</h2></label>
-          <Tuoteryhmat
+          <CategoryList
             url={url}
-            selectedCategory={seletedCategory}
-            setSelectedCategory={seletedCategory}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
           />
           <button className="btn btn-dark" type="button" onClick={() => setAddingCategory(true)}>Lisää uusi tuoteryhmä</button>
         </div>
@@ -47,7 +48,7 @@ export default function Admin({url}) {
     return (
     <>
     <h3>Lisää uusi Tuoteryhmä</h3>
-    <form onSubmit={saveProductCategory}>
+    <form onSubmit={saveCategory}>
       <div className="productscontainer">
         <label>Uuden tuoteryhmän nimi:</label>
         <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />    
