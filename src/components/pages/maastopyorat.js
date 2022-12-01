@@ -12,6 +12,7 @@ import "../styles/carousel.css";
 export default function Maastopyorat(props) {
 
   const [products, setProducts] = useState([]);
+  
 
   useEffect(() => {
     axios.get(props.url + '/maastopyora.php')
@@ -61,11 +62,11 @@ export default function Maastopyorat(props) {
           {products.map(item => (
             <SwiperSlide key={item.id}>
               <div className="productcard">
-                <img id="plogo" className="plogo" src={'/productImg/' + item.tuotemerkki + ".png"} />
+              <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
                 <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl" onClick={e => props.addToCart(item)}></i></a>
                 <div id="imagecontainer" className="imagecontainer">
-                  <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.tuotemerkki + "_" + item.tuotemalli + ".png"} />
+                <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
                 <div className="productdescription">
                 <p className="producttxt">{item.kuvaus}</p>

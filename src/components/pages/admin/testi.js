@@ -19,3 +19,7 @@
 </div>
 </>
 )
+
+
+
+{!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} > : null} 

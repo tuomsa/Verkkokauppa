@@ -10,6 +10,7 @@ import NotFound from './components/pages/NotFound'
 import Admin from './components/pages/admin/admin';
 
 import ScrollToTop from './components/scrollTop';
+import PopUp from './components/popup';
 import Footer from './components/footer';
 import Logo from "./components/imgVid/logo.png"
 import './App.css';
@@ -52,7 +53,7 @@ function App() {
   return (
     <>
       <div className='App'>
-        <img id="logo" src={Logo} alt="logo" />
+        <img id="logo" src={Logo} alt="logo" />       
         <Navbar
           url={URL}
           loggedIn={loggedIn}
@@ -69,7 +70,7 @@ function App() {
             <Route path='/components/pages/sahkopyorat' element={<Sahkopyorat url = {URL} addToCart={addToCart}/>} />
             <Route path='/components/pages/admin' element={<Admin url= {URL} />} />        {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
-          </Routes>
+          </Routes>    
         </div>
         <Footer />
       </div>
