@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../../styles/admin.css';
+import Tuotelista from "./tuotelista";
 import CategoryList from "./categorylist";
 
 

@@ -15,7 +15,7 @@ export default function Navbar(props) {
 
 
   useEffect(() => {
-    axios.get(props.url +'/getcategories.php')
+    axios.get(props.url + '/getcategories.php')
       .then((response) => {
         setCategories(response.data);
         console.log(response.data)
@@ -45,7 +45,7 @@ export default function Navbar(props) {
                   </Link>
                 </li>
               ))}
-              
+
             </ul>
           </li>
           <li>
@@ -59,7 +59,7 @@ export default function Navbar(props) {
           {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         </div>
       </div>
-      
+
     </nav>
   )
 }

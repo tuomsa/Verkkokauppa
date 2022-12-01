@@ -26,10 +26,20 @@ export default function CategoryList({url, selectedCategory,setSelectedCategory}
   }
 
   return (
-    <select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
+    <>
+    <h3 className="tableheader">Tuoterymät</h3>
+    <table className="table">
+      <tr>
+        <th>Trnro</th>
+        <th>Tyyppi</th>
+      </tr>
       {categories.map((category) => (
-        <option key={category.trnro} value={category.trnro}>{category.tyyppi}</option>
+      <tr key={category.trnro}>
+        <td>{category.trnro}</td>
+        <td>{category.tyyppi}</td>
+      </tr>
       ))}
-    </select>
+    </table>
+    </>
   )
 }

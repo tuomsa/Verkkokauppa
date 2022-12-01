@@ -68,7 +68,8 @@ function App() {
             <Route path='/maantiepyorat' element={<Maantiepyorat url = {URL} addToCart={addToCart}/>} />
             <Route path='/maastopyorat' element={<Maastopyorat url = {URL} addToCart={addToCart}/>} />
             <Route path='/sahkopyorat' element={<Sahkopyorat url = {URL} addToCart={addToCart}/>} />
-            <Route path='/admin' element={<Admin url= {URL} />} />        {/*testi,poista rivi*/}
+            <Route path='/admin' element={<Admin url= {URL} />} />
+            <Route path='/login'element={<PopUp/>} />       {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
           </Routes>    
         </div>
