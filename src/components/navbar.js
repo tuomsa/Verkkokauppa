@@ -15,12 +15,12 @@ export default function Navbar(props) {
 
 
   useEffect(() => {
-    axios.get(props.url +'/getmodel.php')
+    axios.get(props.url +'/getcategories.php')
       .then((response) => {
         setHeaders(response.data);
         console.log(response.data)
       }).catch(error => {
-        console.log(error.response.data);
+        alert(error.response === undefined ? error : error.reponse.data.error);
       });
   }, [])
 
@@ -38,7 +38,7 @@ export default function Navbar(props) {
             <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
             <ul className="dropdown-menu" aria-labelledby="dropdown01">
               {headers.map(header => (
-                <li key={header.tyyppi}>
+                <li key={header.trnro}>
                   <Link className="dropdown-item" to={'/components/pages/' + header.tyyppi + "pyorat"} >
                     {header.tyyppi + "pyörät"}
                   </Link>
