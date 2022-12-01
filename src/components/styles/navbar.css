@@ -107,11 +107,12 @@ ul li {
   color: red;
 }
 
-.adminbtn {
+#adminBtn {
 position: absolute;
 left: 0;
 top:0;
-margin-left: 900px;
+margin-top: 20px;
+margin-left: 50%;
 z-index: 99;
 }
 
