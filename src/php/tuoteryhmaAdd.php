@@ -9,7 +9,7 @@ try {
   $db = openDb();
   $sql = "insert into tuoteryhma (tyyppi) values ('$name')";
   executeInsert($db, $sql);
-  $data = array('id' => $db->lastInsertId(), 'tyyppi' => $name);
+  $data = array('trnro' => $db->lastInsertId(), 'name' => $name);
   print json_encode($data);
 } catch (PDOException $pdoex) {
   returnError($pdoex);

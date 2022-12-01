@@ -62,7 +62,7 @@ export default function Maantiepyorat(props) {
         >
 
           {products.map(item => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item.tuotenro}>
               <div className="productcard">
                 <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
