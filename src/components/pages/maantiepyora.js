@@ -15,7 +15,7 @@ export default function Maantiepyorat(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(props.url + '/maantiepyora.php')
+    axios.get(props.url + 'maantiepyora.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data);

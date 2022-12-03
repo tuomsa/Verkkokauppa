@@ -1,9 +1,9 @@
 <?php
-header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Origin: *');
 header('Acces-Control-Allow-Credentials: true');
-header('Access-Control-Allow-Headers: Accept, Access-Control-Allow-Header');
+header("Access-Control-Allow-Headers: POST, GET, PUT, DELETE, OPTIONS");
+header('Acces-Control-Allow-Headers: Origin, X-Requested-With, Accept, Content-Type, Acces-Control-Allow-Header');
 header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Acces-Control-Max-Age: 3000');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {

@@ -7,7 +7,7 @@ export default function Asiakaslista ({url}) {
 const [customers, setCustomers] = useState([]);
 
   useEffect(() => {
-    axios.get(url +'/asiakas.php')
+    axios.get(url +'asiakas.php')
       .then((response) => {
         setCustomers(response.data);
         console.log(response.data)

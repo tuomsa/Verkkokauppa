@@ -14,7 +14,7 @@ export default function Sahkopyorat(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(props.url + '/sahkopyora.php')
+    axios.get(props.url + 'sahkopyora.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)

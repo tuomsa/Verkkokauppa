@@ -6,7 +6,7 @@ export default function Tuotelista ({url}) {
   const [products,setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(url + '/tuote.php')
+    axios.get(url + 'getproducts.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)

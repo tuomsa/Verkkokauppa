@@ -1,0 +1,23 @@
+tr {
+  padding:10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+
+.deleteBtn {
+  padding: 3px;
+}
+
+.deleteBtn:hover {
+  color: red;
+}
+
+#editBtn {
+  padding: 3px;
+  color: black;
+}
+
+#editBtn:hover {
+  color: red;
+}

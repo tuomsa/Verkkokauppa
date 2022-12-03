@@ -15,7 +15,7 @@ export default function Maastopyorat(props) {
   
 
   useEffect(() => {
-    axios.get(props.url + '/maastopyora.php')
+    axios.get(props.url + 'maastopyora.php')
       .then((response) => {
         setProducts(response.data);
         console.log(response.data)

@@ -6,7 +6,7 @@ export default function CategoryList({url, selectedCategory,setSelectedCategory}
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get(url + '/getcategories.php')
+    axios.get(url + 'getcategories.php')
       .then((response) => {
         const json = response.data;
         if (json) {
@@ -22,24 +22,16 @@ export default function CategoryList({url, selectedCategory,setSelectedCategory}
   }, [selectedCategory])
 
   function onCategoryChange(value) {
-    setSelectedCategory(categories.filter(item => item.tyyppi === value));
+    setSelectedCategory(categories.filter(item => item.id === value));
   }
 
   return (
     <>
-    <h3 className="tableheader">Tuoterymät</h3>
-    <table className="table">
-      <tr>
-        <th>Trnro</th>
-        <th>Tyyppi</th>
-      </tr>
-      {categories.map((category) => (
-      <tr key={category.trnro}>
-        <td>{category.trnro}</td>
-        <td>{category.tyyppi}</td>
-      </tr>
-      ))}
-    </table>
+      <select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
+        {categories.map((category) => (
+          <option key={category.trnro} value={category.trnro}>{category.tyyppi}</option>
+        ))}
+      </select>
     </>
   )
 }
