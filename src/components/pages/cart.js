@@ -11,7 +11,7 @@ export default function Cart(props) {
     <div className={("cart-Items", "main")}>
         <div className="cart-items-header">Cart Items</div>
  
-        {props.cartItems.length === 0 && ( <div className="cartItems-empty">Ostoskori on tyhjä.</div> //cartItems undefined
+        {props.cartItems.length === 0 && ( <div className="cartItems-empty">Ostoskori on tyhjä.</div>
         )} 
         <div>
             {props.cartItems.map((item) => (
