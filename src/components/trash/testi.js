@@ -123,3 +123,20 @@ export default function Admin({ url }) {
     </div>
   );
 }
+
+*switch
+
+if (isset($_GET["action"])) {
+        $action = $_GET["action"];
+        
+        switch ($action) {
+            case "1":
+                //koodia
+                    break;
+            case "2":
+                //koodia
+            break;
+        }
+    } else {
+        echo "no action";
+    }

@@ -5,14 +5,13 @@ import './styles/navbar.css'
 import Popup from './popup';
 import axios from "axios";
 import logout from './imgVid/logout.png';
-import Home from './imgVid/home.png'
+import Home from './imgVid/home.png';
 
 
 export default function Navbar(props) {
 
   const [search, setSearch] = useState('');
   const [categories, setCategories] = useState([]);
-
 
   useEffect(() => {
     axios.get(props.url + '/getcategories.php')
@@ -28,7 +27,7 @@ export default function Navbar(props) {
 
     <nav id="mainnavbar" className="navbar navbar-expand-lg">
       {props.loggedIn ? <button className="logout" type="button" onClick={event => props.setLoggedIn(false)} ><p>{props.userName}</p></button> : null}
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span className="navbar-toggler-icon"></span> </button>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
       <Link to="/admin"><button id="adminBtn" className="btn btn-danger">Admin</button></Link>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
@@ -45,7 +44,6 @@ export default function Navbar(props) {
                   </Link>
                 </li>
               ))}
-
             </ul>
           </li>
           <li>
@@ -59,7 +57,6 @@ export default function Navbar(props) {
           {!props.loggedIn ? <Popup setLoggedIn={props.setLoggedIn} setUserName={props.setUserName} /> : null}
         </div>
       </div>
-
     </nav>
   )
 }

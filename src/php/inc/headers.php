@@ -1,13 +1,14 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Acces-Control-Allow-Credentials: true');
-header("Access-Control-Allow-Headers: POST, GET, PUT, DELETE, OPTIONS");
-header('Acces-Control-Allow-Headers: Origin, X-Requested-With, Accept, Content-Type, Acces-Control-Allow-Header');
-header('Content-Type: application/json');
-header('Acces-Control-Max-Age: 3000');
+header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Accept, Content-Type, Access-Control-Allow-Header');
+header('Content-Type: text/json');
+header('Access-Control-Max-Age: 3600');
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-  if (isset($_SERVER['HTTP_ACCES_CONTROL_REQUEST_HEADERS']))
+  if (isset($_SERVER['HTTP_ACCES_CONTROL_REQUEST_METHOD']))
     header("Acces-Control-Allow-Methods: GET, POST, OPTIONS");
 
   if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))

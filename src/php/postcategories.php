@@ -1,9 +1,11 @@
 <?php
-require_once './inc/functions.php';
-require_once './inc/headers.php';
+require_once('./inc/functions.php');
+require('./inc/headers.php');
 
-$input = json_decode(file_get_contents('php://input'));
-$name = filter_var($input->name,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+header('Access-Control-Allow-Origin: *');
+
+if (isset($_POST["name"])) {
+$name = filter_var($_POST["name"],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 var_dump($name);
 try {
@@ -14,4 +16,8 @@ try {
   print json_encode($data);
 } catch (PDOException $pdoex) {
   returnError($pdoex);
+}
+} else {
+  http_response_code(400);
+  echo "Missing argument";
 }

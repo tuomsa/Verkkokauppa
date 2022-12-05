@@ -6,25 +6,25 @@ import CategoryList from "./categorylist";
 
 
 
-export default function ManageCategories({ url }) {
+export default function ManageCategories(props) {
 
   const [newCategory, setNewCategory] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [addingCategory, setAddingCategory] = useState(false);
 
+
   function saveCategory(e) {
     e.preventDefault();
-    const json = JSON.stringify({ name: newCategory });
-    axios.post(url + 'postcategories.php', json, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
+    const formData = new FormData();
+    var newCategoryName = document.getElementById("newCategoryInput").value;
+    formData.append('name', newCategoryName);
+    axios.post(props.url + 'postcategories.php', formData)
       .then((response) => {
         setNewCategory('');
         setAddingCategory(false);
         setSelectedCategory(response.data);
       }).catch(error => {
+        console.log(props.url + 'postcategories.php')
         alert(error.response === undefined ? error : error.response.data.error);
       });
   }
@@ -35,7 +35,7 @@ export default function ManageCategories({ url }) {
         <div className="productscontainer">
           <label><h2>Tuoteryhmien järjestely</h2></label>
           <CategoryList
-            url={url}
+            url={props.url}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
           />
@@ -47,12 +47,12 @@ export default function ManageCategories({ url }) {
     return (
       <>
         <h3>Lisää uusi Tuoteryhmä</h3>
-        <form onSubmit={saveCategory}>
+        <form>
           <div className="productscontainer">
             <label>Uuden tuoteryhmän nimi:</label>
-            <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)} />
-          <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
-          <button type="submit">Tallenna</button>
+            <input type="text" id="newCategoryInput" />
+            <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
+            <button type="button" onClick={e => saveCategory(e)}>Tallenna</button>
           </div>
         </form>
       </>

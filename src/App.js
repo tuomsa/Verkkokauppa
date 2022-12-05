@@ -15,7 +15,8 @@ import Footer from './components/footer';
 import Logo from "./components/imgVid/logo.png"
 import './App.css';
 
-const URL = 'http://localhost/fiuke/';
+//const URL = 'http://localhost/fiuke/';
+const URL = 'http://localhost:3001/src/php/'
 
 function App() {
 

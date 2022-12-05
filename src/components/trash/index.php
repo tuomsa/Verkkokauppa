@@ -74,7 +74,7 @@ switch ($method) {
     break;
 
   case "DELETE":
-    $sql = "DELETE FROM asiakas WHERE astunnus = :astunnus";
+    $sql = "DELETE FROM asiakas WHERE astunnus = :astunnus";   /// ÄLÄ SAATANA!
     $path = explode('/', $_SERVER['REQUEST_URI']);
 
     $stmt = $conn->prepare($sql);
