@@ -8,6 +8,7 @@ import Maastopyorat from './components/pages/maastopyorat';
 import Sahkopyorat from './components/pages/sahkopyorat';
 import NotFound from './components/pages/NotFound'
 import Admin from './components/pages/admin';
+import Cart from './components/pages/cart';
 
 import ScrollToTop from './components/scrollTop';
 import PopUp from './components/popup';
@@ -22,33 +23,47 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [userName, setUserName] = useState('');
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    if ('cart' in localStorage) {
-      setCart(JSON.parse(localStorage.getItem('cart')));
+    if ('cartItems' in localStorage) {
+      setCartItems(JSON.parse(localStorage.getItem('cartItems')));
     }
-  }, [])
+   }, [])
 
-  function addToCart(product) {
-    if (cart.some(item => item.tuotenro === product.tuotenro)) {
-      const existproduct = cart.filter(item => item.tuotenro === product.tuotenro);
-      updateAmount(parseInt(existproduct[0].amount) + 1, product);
+   function addToCart(product) {
+    if (cartItems.some(item => item.tuotenro === product.tuotenro)){
+      const existproduct = cartItems.filter(item => item.tuotenro === product.tuotenro);
+      updateAmount(parseInt(existproduct[0].amount)+1,product);
     } else {
-      product['amount'] = 1;
-      const newCart = [...cart, product];
-      setCart(newCart);
-      localStorage.setItem('cart', JSON.stringify(newCart));
+    product['amount'] = 1;
+    const newCartItems = [...cartItems,product];
+    setCartItems(newCartItems);
+    localStorage.setItem('cartItems',JSON.stringify(newCartItems)); 
+  }
+  }
+
+  function removeFromCart(product) {
+    const itemsWithoutRemoved = cartItems.filter(item => item.tuotenro !== product.tuotenro);
+    setCartItems(itemsWithoutRemoved);
+    localStorage.setItem('cartItems',JSON.stringify(itemsWithoutRemoved));
+  }
+
+  function subtractFromCart(product) {
+    if (cartItems.some(item => item.tuotenro === product.tuotenro) & product.amount >= 2){
+      const existproduct = cartItems.filter(item => item.tuotenro === product.tuotenro);
+      updateAmount(parseInt(existproduct[0].amount)-1,product);
     }
   }
 
-  function updateAmount(amount, product) {
+  function updateAmount(amount,product) {
     product.amount = amount;
-    const index = cart.findIndex((item => item.tuotenro === product.tuotenro));
-    const modifiedCart = Object.assign([...cart], { [index]: product });
-    setCart(modifiedCart);
-    localStorage.setItem('cart', JSON.stringify(modifiedCart));
+    const index = cartItems.findIndex((item => item.tuotenro === product.tuotenro));
+    const modifiedCartItems = Object.assign([...cartItems],{[index]: product});
+    setCartItems(modifiedCartItems);
+    localStorage.setItem('cartItems',JSON.stringify(modifiedCartItems));
   }
+
 
   return (
     <>
@@ -71,6 +86,7 @@ function App() {
             <Route path='/admin/*' element={<Admin url={URL} />} />
             <Route path='/login' element={<PopUp />} />       {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
+            <Route path='/cart' element={<Cart url= {URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
           </Routes>
         </div>
         <Footer />

@@ -50,7 +50,7 @@ export default function Navbar(props) {
             <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
           </li>
           <li>
-            <a className="shop-link" href="#"><i className="fa-sharp fa-solid fa-basket-shopping fa-2xl" id="shoppingCart"></i></a>
+            <a className="shop-link" href="/cart"><i className="fa-sharp fa-solid fa-basket-shopping fa-2xl" id="shoppingCart"></i></a>
           </li>
         </ul>
         <div>
