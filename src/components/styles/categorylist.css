@@ -1,0 +1,13 @@
+tbody {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+tr td{
+  width: 100px;
+  color: black;
+ 
+  padding:10px;
+  border: 1px solid black;
+  text-align: center;
+}

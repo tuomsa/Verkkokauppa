@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/categorylist.css';
+
 
 export default function CategoryList({url, selectedCategory,setSelectedCategory}) {
 
@@ -26,12 +28,19 @@ export default function CategoryList({url, selectedCategory,setSelectedCategory}
   }
 
   return (
-    <>
-      <select value={selectedCategory?.id} onChange={(e) => onCategoryChange(e.target.value)}>
-        {categories.map((category) => (
-          <option key={category.trnro} value={category.trnro}>{category.tyyppi}</option>
+    <tbody>
+        <tr>
+          <th>Tuoteryhmä</th>
+          <th>Tyyppi</th>
+          <th>Tila</th>
+        </tr>
+        {categories.map(category => (
+          <tr key={category.trnro}>
+          <td>{category.trnro}</td>
+          <td>{category.tyyppi}</td>
+          <td>{category.status}</td>
+          </tr>
         ))}
-      </select>
-    </>
+    </tbody>
   )
 }

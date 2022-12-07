@@ -1,60 +1,28 @@
-.productscontainer {
-  margin: 50px;
-  margin-top: 100px;
+.productscontainer{
+  width: 33.5%;
+  position: relative;
+  padding-left: 5%;
+  font-size: 1.2em;
+  background-color: white;
   border-radius: 10px;
-  padding: 20px;
-  font-size: 1.5em;
-  background-color: transparent;
-  height: 700px;
-  text-align: center;
-  color: white;
+  margin-top: 150px;
+  opacity: 0.9;
 }
 
-.table {  
-  background: rgb(197, 195, 195);
-  text-align: center;
+h2 {
+padding-top: 20px;
 }
 
-.table th, table tr , table td{
-  border: 1px solid black; 
+button {
+margin-block-start: 10px;
+margin-bottom: 25px;
 }
 
-.table tr:hover {
-  background-color: rgba(247, 5, 5, 0.278);
+.form-check-input {
+  margin-left: 15px;
+  border-color: black;
 }
 
-.table th {
-  background-color: rgb(190, 4, 4);
-  color: white; 
-}
-
-tr:nth-child(2n) {
-  background-color: beige;
-}
-
-.editbuttons {
-  display: inline-block;
-  width: 100px;
-}
-
-#modify {
-  height: 22px;
-  width: 22px;
-  background-image: url('../imgVid/edit.png');
-  background-size: contain;
-  border: none;
-  margin: 5px;
-}
-
-#remove {
-  height: 22px;
-  width: 22px;
-  background-image: url('../imgVid/remove.png');
-  background-size: contain;
-  border: none;
-  margin: 5px;
-}
-
-#modify:hover, #remove:hover {
+#savebtn{
   margin-left: 10px;
 }
