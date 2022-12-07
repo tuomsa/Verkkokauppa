@@ -16,7 +16,6 @@ import Footer from './components/footer';
 import Logo from "./components/imgVid/logo.png"
 import './App.css';
 
-//const URL = 'http://localhost/fiuke/';
 const URL = 'http://localhost:3001/src/php/'
 
 function App() {
@@ -86,7 +85,7 @@ function App() {
             <Route path='/admin/*' element={<Admin url={URL} />} />
             <Route path='/login' element={<PopUp />} />       {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
-            <Route path='/cart' element={<Cart url= {URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
+            <Route path='/cart' element={<Cart url={URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
           </Routes>
         </div>
         <Footer />
