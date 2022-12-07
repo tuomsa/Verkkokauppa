@@ -1,4 +1,17 @@
 .content {
+  margin-top: 200px;
+  margin-bottom: 200px;
   text-align: center;
   color: white;
+}
+
+H1{
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
+
+}
+
+#homeFront{
+  font-size: 30px;
+  font-family: 'Special Elite', cursive;
 }
