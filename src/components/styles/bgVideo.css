@@ -9,10 +9,9 @@
   filter: grayscale(30%);
   opacity: 0.8;
   z-index: -6;
-  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1320px) {
   
   #video {
     display: none;

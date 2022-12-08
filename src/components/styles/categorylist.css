@@ -1,16 +1,12 @@
 tbody {
-  margin-bottom: 20px;
-  width: 100%;
-  align-self: center;
+  margin-bottom: 20px; 
 }
-
-tr td{
-  color: black;
-  padding:10px;
-  border: 1px solid black;
+th {
   text-align: center;
 }
-
-tr:hover {
-  background-color: red;
+tr td{
+  text-align: center;
+  color: black;
+  width: 100px;
+  border: 1px solid black;
 }

@@ -41,8 +41,7 @@ ul li {
   color: white;
 }
 
-.popup {
-  
+.popup { 
   font-family: inherit;
   border-radius: 5px;
   background-color: transparent;
@@ -109,10 +108,10 @@ ul li {
 
 #adminBtn {
 position: absolute;
-left: 0;
+right: 0;
 top:0;
-margin-top: 20px;
-margin-left: 50%;
+margin-top: 10px;
+margin-right: 20px;
 z-index: 99;
 }
 
