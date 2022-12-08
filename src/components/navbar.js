@@ -14,7 +14,7 @@ export default function Navbar(props) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get(props.url + '/getcategories.php')
+    axios.get(props.url + '/getcategoriesActive.php')
       .then((response) => {
         setCategories(response.data);
         console.log(response.data)
@@ -47,7 +47,7 @@ export default function Navbar(props) {
             </ul>
           </li>
           <li>
-            <input type="text" className="search" placeholder="Etsi tuotteita" /> <button className="searchButton">Etsi</button>
+            <input type="text" className="search" placeholder="Etsi tuotteita"/><button className="searchButton">Etsi</button>
           </li>
           <li>
             <a className="shop-link" href="/cart"><i className="fa-sharp fa-solid fa-basket-shopping fa-2xl" id="shoppingCart"></i></a>

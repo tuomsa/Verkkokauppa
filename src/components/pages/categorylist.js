@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/categorylist.css';
 
-
-export default function CategoryList({url, selectedCategory,setSelectedCategory}) {
+export default function CategoryList({ url, selectedCategory, setSelectedCategory }) {
 
   const [categories, setCategories] = useState([]);
 
@@ -29,18 +28,18 @@ export default function CategoryList({url, selectedCategory,setSelectedCategory}
 
   return (
     <tbody>
-        <tr>
-          <th>Tuoteryhmä</th>
-          <th>Tyyppi</th>
-          <th>Tila</th>
-        </tr>
-        {categories.map(category => (
-          <tr key={category.trnro}>
+      <tr>
+        <th>Tuoteryhmä</th>
+        <th>Tyyppi</th>
+        <th>Tila</th>
+      </tr>
+      {categories.map(category => (
+        <tr key={category.trnro}>
           <td>{category.trnro}</td>
           <td>{category.tyyppi}</td>
           <td>{category.status}</td>
-          </tr>
-        ))}
+        </tr>
+      ))}
     </tbody>
   )
 }

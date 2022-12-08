@@ -4,7 +4,7 @@ require_once './inc/headers.php';
 
 try {
   $db = openDb();
-  selectAsJson($db,'SELECT * FROM tuoteryhma');
+  selectAsJson($db,'SELECT * FROM tuoteryhma WHERE status = "active"');
 }
 catch (PDOException $pdoex) {
   returnError($pdoex);
