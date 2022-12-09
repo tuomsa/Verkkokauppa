@@ -2,6 +2,7 @@ import React from "react"
 import "./styles/login.css"
 import Login from "./login"
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 
 
 {/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */ }
@@ -30,7 +31,7 @@ export default function PopUp(props) {
               <p className="popupheader">KIRJAUDU SISÄÄN</p>
                 <input type="text" name="uname" id="uname" className="inputEmail" placeholder="Sähköpostiosoite" required />
                 <input type="password" name="pass" className="inputPW" placeholder="Salasana" />
-                <a href="#" className="register">Ei vielä rekisteröityä tiliä? Liity tästä.</a>
+                <Link className="regg" to="/register"><a onClick={() => setButtonPopup(false)}  > Ei vielä tiliä? Rekisteröidy tässä!  </a> </Link>
               </div>
               <div class="col-sm">
                 <button className="loginPopUpBtn" onClick={testLogin}>Lähetä</button>
