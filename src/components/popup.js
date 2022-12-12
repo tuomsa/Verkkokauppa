@@ -3,7 +3,7 @@ import "./styles/login.css"
 import Login from "./login"
 import { useState } from "react";
 import { Link } from 'react-router-dom'
-
+import Regg from "./regg";
 
 {/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */ }
 
@@ -34,7 +34,7 @@ export default function PopUp(props) {
                 <Link className="regg" to="/register"><a onClick={() => setButtonPopup(false)}  > Ei vielä tiliä? Rekisteröidy tässä!  </a> </Link>
               </div>
               <div class="col-sm">
-                <button className="loginPopUpBtn" onClick={testLogin}>Lähetä</button>
+               <button className="loginPopUpBtn"  onClick={testLogin} >Lähetä</button> 
               </div>
             </div>
           </div>
