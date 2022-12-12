@@ -32,31 +32,8 @@ export default function Footer() {
                     <div className="row">
                         {/*column1 vasen*/}
                         <div className="col">
-                            <h1>Otsikko</h1>
-                            <ul className="list-unstyled">
-                                <li> Eka teksti</li>
-                                <li> Eka teksti</li>
-                                <li> Eka teksti</li>
-                            </ul>
-                        </div>
-                        {/*column2 keski*/}
-                        <div className="col">
-                            <h1>Otsikko</h1>
-                            <ul className="list-unstyled">
-                                <li> Eka toka teksti</li>
-                                <li> Eka toka teksti</li>
-                                <li> Eka toka teksti</li>
-                            </ul>
-                        </div>
-                        {/*column3oikea*/}
-                        <div className="col">
-                            <h1>Otsikko</h1>
-                            <ul className="list-unstyled">
-                                <li> Eka toka teksti</li>
-                                <li> Eka toka teksti</li>
-                                <li> Eka toka teksti</li>
-                            </ul>
-                        </div>
+                            <h5>Sasa Mora Roca - Juha Jauhiainen - Tuomas Hiljanen - Ville Koivuneva - Mika Lampinen </h5>
+                        </div>  
                     </div>
                     <hl />
                     <div className="row">
