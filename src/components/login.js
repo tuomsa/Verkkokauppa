@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles/login.css'
 
-{/* KIRJAUTUMIS NAPPI JA SEN TOIMINNALLISUUS */ }
+{/* KIRJAUTUMIS LOMAKKEEN SULKEMIS NAPPI JA SEN TOIMINNALLISUUS */ }
 export default function Login(props) {
 
     return (props.trigger) ? (

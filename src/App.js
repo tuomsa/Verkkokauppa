@@ -9,6 +9,7 @@ import Sahkopyorat from './components/pages/sahkopyorat';
 import NotFound from './components/pages/NotFound'
 import Admin from './components/pages/admin';
 import Cart from './components/pages/cart';
+import Register from './components/pages/register';
 
 import ScrollToTop from './components/scrollTop';
 import PopUp from './components/popup';
@@ -86,6 +87,7 @@ function App() {
             <Route path='/login' element={<PopUp />} />       {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
             <Route path='/cart' element={<Cart url={URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+            <Route path='/register' element={<Register url = {URL} />} />
           </Routes>
         </div>
         <Footer />
