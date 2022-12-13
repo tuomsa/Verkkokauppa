@@ -29,7 +29,6 @@ export default function Footer() {
                             <h5>Sasa Mora Roca - Juha Jauhiainen - Tuomas Hiljanen - Ville Koivuneva - Mika Lampinen </h5>
                         </div>
                     </div>
-                    <hl />
                     <div className="row">
                         <p className="col-sm">
                             &copy;{new Date().getFullYear()} FIUKE | YLEISET EHDOT | TIETOSUOJA | YRITYSINFO | EVÄSTEASETUKSET

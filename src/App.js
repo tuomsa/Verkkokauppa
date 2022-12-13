@@ -87,7 +87,7 @@ function App() {
             <Route path='/login' element={<PopUp />} />       {/*testi,poista rivi*/}
             <Route path='*' element={<NotFound />} />
             <Route path='/cart' element={<Cart url={URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
-            <Route path='/register' element={<Register url = {URL} />} />
+            <Route path='/register' element={<Register url={URL} />} />
           </Routes>
         </div>
         <Footer />
