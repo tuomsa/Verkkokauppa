@@ -26,14 +26,14 @@ export default function PopUp(props) {
 
         <form id="loginForm">
           <div className="input-container">
-            <div class="row">
-              <div class="col-sm">
+            <div className="row">
+              <div className="col-sm">
                 <p className="popupheader">KIRJAUDU SISÄÄN</p>
                 <input type="text" name="uname" id="uname" className="inputEmail" placeholder="Sähköpostiosoite" required />
                 <input type="password" name="pass" className="inputPW" placeholder="Salasana" />
                 <Link className="regg" to="/register"><a onClick={() => setButtonPopup(false)} > Ei vielä tiliä? Rekisteröidy tässä!  </a> </Link>
               </div>
-              <div class="col-sm">
+              <div className="col-sm">
                 <button className="loginPopUpBtn" onClick={testLogin} >Lähetä</button>
               </div>
             </div>

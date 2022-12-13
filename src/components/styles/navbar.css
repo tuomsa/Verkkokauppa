@@ -3,6 +3,7 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   
 }
+
 ul li{
   display: inline;
   align-items: baseline;
@@ -28,9 +29,8 @@ ul li{
 }
 
 .dropdown-menu {
-  margin-top: 50px;
-  margin-left: 320px;
-  background-image: url("../imgVid/darkbg.jpg");
+  margin-left: 300px;
+  background-color: transparent;
 }
 
 .dropdown-item {
@@ -69,7 +69,6 @@ ul li{
   font-size: 1.15em;
   width: 320px;
   height: 50px;
-
 }
 
 .search {
@@ -103,14 +102,12 @@ ul li{
   color: red;
 }
 
-
 @media screen and (max-width: 600px) {
 
   #navbarSupportedContent {
     background-color: transparent;
     color: white;
     min-height: 900px;
-
   }
 
   .navbar-toggler-icon {
@@ -162,13 +159,10 @@ ul li{
     font-size: 1.2em;
   }
 
-
-
   @keyframes rotation {
     from {
       transform: rotate(0deg);
     }
-
     to {
       transform: rotate(359deg);
     }
