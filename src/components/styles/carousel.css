@@ -4,9 +4,11 @@
   background-color: transparent;
   margin-bottom: 100px;
 }
+
 #header {
   font-size: 1.8em;
 }
+
 .swiper {
   position: relative;
   box-sizing: border-box;
@@ -100,15 +102,16 @@
   margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .imagecontainer {
   margin-top: 15%;
   height: 150px;
 }
+
 #bikepicture {
   width: 100%;
   height: 80%;
   object-fit: contain;
-
   transition: transform .2s ease-out;
   cursor: pointer;
 }

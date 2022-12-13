@@ -92,6 +92,7 @@
     margin-right: 5px;
     margin-top: 23px;
 }
+
 .loginPopUpBtn:hover {
     background-color: red;
 }
@@ -136,5 +137,4 @@
     .inputPW {
         width: 95%;
     }
-
 }
