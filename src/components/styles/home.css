@@ -1,7 +1,6 @@
 .content {
   text-align: center;
   color: white;
-  height: 100wh;
 }
 
 .textcontainer {
@@ -9,8 +8,7 @@
   top: 0;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 250px;
-  z-index: 999;
+  margin-top: 550px;
 }
 
 h1{

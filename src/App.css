@@ -16,3 +16,9 @@
   .container {
     min-height: 750px;
   }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      margin-top: 420px;
+    }
+  }

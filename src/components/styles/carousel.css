@@ -1,20 +1,12 @@
-body {
-  background-color: transparent;
-  /* rgb(181, 155, 155) */
-  font-family: inherit;
-  font-size: 14px;
-  color: #000;
-  height: 100%;
-}
-
 .main {
   width: 100%;
   border-radius: 10px;
   background-color: transparent;
-  margin-top: 100px;
   margin-bottom: 100px;
 }
-
+#header {
+  font-size: 1.8em;
+}
 .swiper {
   position: relative;
   box-sizing: border-box;
@@ -25,7 +17,7 @@ body {
 
 .swiper-slide {
   text-align: center;
-  background: #fff;
+  background: #fff; 
   height: 500px;
 
   /* Center slide text vertically */
@@ -81,7 +73,6 @@ body {
   opacity: 0.7;
 }
 
-
 /*----------- Tuotekortti --------------*/
 
 .productcard {
@@ -93,9 +84,9 @@ body {
 }
 
 #plogo {
-  margin-top: 3%;
+  margin-top: 20%;
   height: 40px;
-  width: 180px;
+  width: 160px;
   object-fit: contain;
 }
 
@@ -104,13 +95,13 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  margin-top: 20%;
+  margin-top: 37%;
   margin-right: auto;
   margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 .imagecontainer {
-  margin-top: 20%;
+  margin-top: 15%;
   height: 150px;
 }
 #bikepicture {
@@ -129,9 +120,8 @@ body {
 
 .productdescription {
   position: relative;
-  margin-top: 5px;
   height: 200px;
-  font-size: 0.95em;
+  font-size: 0.65em;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -156,4 +146,15 @@ body {
 
 #productcart:hover {
   transform: scale(1.6);
+}
+
+@media screen and (max-width: 600px) {
+
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
 }

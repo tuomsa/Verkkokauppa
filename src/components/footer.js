@@ -9,31 +9,25 @@ import logo4 from "../components/imgVid/Orbea2.png"
 export default function Footer() {
 
     return (
-
         <div className="up">
             <div className="main-footer">
                 <div className="container">
-
-
                     {/* Logot Footerissa  */}
-
-                <div className="row">
-                <div className="logoz">
-                <p className="col-sm">
-                <img className="logo1"src={logo1}  />
-                <img className="logo1" src={logo2}  />
-                <img className="logo1" src={logo3}  />
-                <img className="logo1" src={logo4}  />
-                </p>
-                </div>
-               
+                    <div className="row">
+                        <div className="logoz">
+                            <p className="col-sm">
+                                <img className="logo1" src={logo1} />
+                                <img className="logo1" src={logo2} />
+                                <img className="logo1" src={logo3} />
+                                <img className="logo1" src={logo4} />
+                            </p>
+                        </div>
                     </div>
-
                     <div className="row">
                         {/*column1 vasen*/}
                         <div className="col">
                             <h5>Sasa Mora Roca - Juha Jauhiainen - Tuomas Hiljanen - Ville Koivuneva - Mika Lampinen </h5>
-                        </div>  
+                        </div>
                     </div>
                     <hl />
                     <div className="row">

@@ -1,9 +1,11 @@
 #mainnavbar {
-  height: 100px;
+  height: 200px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  z-index: 1;
+  
 }
-ul li {
+ul li{
+  display: inline;
+  align-items: baseline;
   list-style-type: none;
 }
 
@@ -13,16 +15,11 @@ ul li {
 }
 
 #homelink {
-  margin-right: 20px;
   color: white;
 }
+
 #homelink:hover {
   color:red
-}
-.nav-link a{
- color: white;
- font-size: 1.5em;
- text-decoration: none;
 }
 
 #dropdown01 {
@@ -31,8 +28,8 @@ ul li {
 }
 
 .dropdown-menu {
+  margin-top: 50px;
   margin-left: 320px;
-  
   background-image: url("../imgVid/darkbg.jpg");
 }
 
@@ -41,38 +38,43 @@ ul li {
   color: white;
 }
 
-.popup { 
-  font-family: inherit;
-  border-radius: 5px;
-  background-color: transparent;
-  border: none;
-  text-align: center;
+#admin {
+  color: white;
   text-decoration: none;
-  font-size: 1.5em;
-  margin-top: 14px;
-  margin-left: 10px;
+  font-size: 21px;
 }
 
-.logout {
-  display: inline;
+#admin:hover {
+  color: red;
+}
+
+.loginBtn {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.203);
-  border: none;
-  color: white;
-  font-size: 1.4em;
-  width: 320px;
-  height: 30px;
   right: 0;
-  margin-right: 400px;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 8px;
+}
+
+#logout {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(227, 7, 7, 0.779);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.15em;
+  width: 320px;
+  height: 50px;
+
 }
 
 .search {
-  position: absolute;
-  right: 0;
-  margin-right: 160px;
-  margin-top: 14px;
+  margin-left: 160px;
   text-align: center;
-  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid red;
@@ -83,49 +85,37 @@ ul li {
 }
 
 .searchButton {
-  position: absolute;
-  right: 0;
-  margin-right: 100px;
-  margin-top: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 10px;
   border-radius: 3px;
   font-size: 1.2em;
 }
 
 #shoppingCart {
   position: absolute;
-  display: block;
-  margin-top: 26px;
+  margin-top: 120px;
+  top: 0;
   right: 0;
   color: white;
-  margin-right: 40px;
+  margin-right: 20px;
 }
 
 #shoppingCart:hover {
   color: red;
 }
 
-#adminBtn {
-position: absolute;
-right: 0;
-top:0;
-margin-top: 10px;
-margin-right: 20px;
-z-index: 99;
-}
 
 @media screen and (max-width: 600px) {
 
   #navbarSupportedContent {
-    margin-top: 150px;
+    background-color: transparent;
+    color: white;
+    min-height: 900px;
+
   }
 
   .navbar-toggler-icon {
-    position: absolute;
+    margin-top: 170px;
     border: none;
-    left: 0;
-    margin-left: 15px;
     background-image: url("../imgVid/icons-circle-around-64.png");
     width: 35px;
     height: 35px;
@@ -133,6 +123,45 @@ z-index: 99;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
+
+  .navbar-nav {
+    margin-left: 10px;
+  }
+
+  .dropdown-menu {
+    margin-left: 0px;
+    margin-right: 7px;
+    background: none;
+  }
+
+
+  .navbar-toggler .icon-bar {
+    margin: 7px;
+    display: block;
+    width: 22px;
+    height: 1px;
+    background-color: #cccccc;
+    border-radius: 1px;
+  }
+
+  .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 80px;
+    margin-top: 220px;
+  }
+
+  .searchButton {
+    position: absolute;
+    top: 0;
+    margin-top: 220px;
+    right: 0;
+    margin-right: 20px;
+    border-radius: 3px;
+    font-size: 1.2em;
+  }
+
 
 
   @keyframes rotation {

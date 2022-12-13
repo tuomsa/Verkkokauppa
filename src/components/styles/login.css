@@ -1,18 +1,23 @@
-form {
-    position: sticky;
-    top: 0;
+#loginForm {
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
     background-image: url('../imgVid/LogoRotated.png');
     background-repeat: no-repeat;
     background-size: contain;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    width: 395px;
     height: 150px;
 }
+
 .popupheader {
     margin-bottom: 0px;
 }
 
 .loginBtn {
-    margin-top: 60px;
     background-color: transparent;
     color: white;
     border: none;
@@ -20,10 +25,6 @@ form {
 
 .loginBtn:hover {
     color: red;
-}
-
-.loginImg {
-    display: none;
 }
 
 .loginImg:hover {
@@ -62,8 +63,9 @@ form {
 
 .inputEmail,
 .inputPW {
-    margin-left: 20px;
-    width: 400px;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 300px;
     text-align: center;
 }
 
@@ -87,12 +89,13 @@ form {
     display: inline;
     border-radius: 5px;
     height: 62px;
-    margin-right: 20px;
-    margin-top: 32px;
+    margin-right: 5px;
+    margin-top: 23px;
 }
 .loginPopUpBtn:hover {
     background-color: red;
 }
+
 .close-btn {
     z-index: 5;
 }
@@ -118,8 +121,6 @@ form {
         position: absolute;
         right: -120px;
         top: 30px;
-
-
         height: 30px;
         filter: invert(100%);
     }

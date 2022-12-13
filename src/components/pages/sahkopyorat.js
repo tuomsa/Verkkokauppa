@@ -29,13 +29,13 @@ export default function Sahkopyorat(props) {
       <div className="main">
           <h1 id="header">Sähköpyörät</h1>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={2}
           slidesPerGroup={1}
           spaceBetween={10}
 
           breakpoints={{
 
-            481: {
+            350: {
               slidesPerView: 2,
               slidesPerGroup: 2,
               spaceBetween: 5
@@ -63,7 +63,7 @@ export default function Sahkopyorat(props) {
               <div className="productcard">
               <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
-                <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-xl" onClick={e => props.addToCart(item)}></i></a>
+                <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-lg" onClick={e => props.addToCart(item)}></i></a>
                 <div id="imagecontainer" className="imagecontainer">
                 <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
                 </div>

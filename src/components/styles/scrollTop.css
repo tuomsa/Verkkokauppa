@@ -1,6 +1,7 @@
 .scroll-to-top a{
   color: white;
   text-align: center;
+  text-shadow: 2px 2px 5px black;
   height: 50px;
   width: 30px;
   border-top: 6px solid red;
