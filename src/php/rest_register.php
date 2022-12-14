@@ -1,4 +1,4 @@
-<?php
+<!--
 require('./inc/headers.php');
 session_start();
 require('./db_user_controller.php');
@@ -22,4 +22,4 @@ echo "User $uname registered"
 
 
 
-?>
+>
