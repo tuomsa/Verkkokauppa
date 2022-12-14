@@ -11,7 +11,7 @@ echo $_SESSION['username'];
 
 if(!isset($_POST['uname']) || !isset($_POST['pw'])){
     http_response_code(401);
-    echo "USer not defined";
+    echo "User not defined";
     return;
 
 }
@@ -24,7 +24,7 @@ if($verified_uname){
     echo $verified_uname;
 }else {
     http_response_code(200);
-    echo "Wrond username or password";
+    echo "Wrong username or password";
 }
 
 ?>
