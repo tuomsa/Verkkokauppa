@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom'
 
 const URL = "http://localhost:3001/src/php/"
 
-export default function Register() {
-
-
+export default function Register(props) {
 
     const [uname, setUname] = useState("");
     const [pw, setPw] = useState("");
@@ -19,43 +17,6 @@ export default function Register() {
     const [postpl, setPostTmp] = useState("");
     const [phnnro, setPuhNro] = useState("");
     
-    
-
-
-
-    return (
-        <div className="formReg"> 
-        <h1 className="reki">REKISTERÖIDY</h1>
-        <form >
-            <div className="aNimi">
-            <input type="text" placeholder="Nimesi" value={uname} onChange={e=>setUname(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="password" placeholder="Salasana" value={pw} onChange={e=>setPw(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="text" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="text" placeholder="Osoite" value={address} onChange={e=>setAddress(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="text" placeholder="Posti numero" value={postnro} onChange={e=>setPostNro(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="text" placeholder="Postitoimipaikka" value={postpl} onChange={e=>setPostTmp(e.target.value)} ></input>
-            </div>
-            <div className="sSana">
-            <input type="text" placeholder="Puhelin" value={phnnro} onChange={e=>setPuhNro(e.target.value)} ></input>
-            </div>
-            <Link classname="WTF" to='/'>   <button type="button" className="regBut" onClick={RegSend}> REKISTERÖI!</button> </Link>
-        </form>
-    
-        
-        </div>
-
-    )
-
     function RegSend(){
         const formData = new FormData();
         formData.append("uname",uname);
@@ -66,9 +27,39 @@ export default function Register() {
         formData.append("posttmp",postpl);
         formData.append("puhnro",phnnro);
   
-        axios.post(URL+"register.php",formData, {}  )
+        axios.post(props.url+"rest_register.php",formData, {}  )
         
         .catch(e=>console.log(e.message))
       }
+    
 
+    return (
+        <div className="formReg">
+            <h1 className="reki">REKISTERÖIDY</h1>
+            <form >
+                <div className="aNimi">
+                    <input type="text" placeholder="Nimesi" value={uname} onChange={e => setUname(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="password" placeholder="Salasana" value={pw} onChange={e => setPw(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="text" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="text" placeholder="Osoite" value={address} onChange={e => setAddress(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="text" placeholder="Posti numero" value={postnro} onChange={e => setPostNro(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="text" placeholder="Postitoimipaikka" value={postpl} onChange={e => setPostTmp(e.target.value)} ></input>
+                </div>
+                <div className="sSana">
+                    <input type="text" placeholder="Puhelin" value={phnnro} onChange={e => setPuhNro(e.target.value)} ></input>
+                </div>
+                <Link classname="WTF" to='/'>   <button type="button" className="regBut" onClick={RegSend}> REKISTERÖI!</button> </Link>
+            </form>
+        </div>
+    )
 };

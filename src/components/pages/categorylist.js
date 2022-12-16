@@ -27,7 +27,7 @@ export default function CategoryList({ url, selectedCategory, setSelectedCategor
   }
 
   return (
-    <tbody>
+    <div>
       <tr>
         <th>Tuoteryhmä</th>
         <th>Tyyppi</th>
@@ -40,6 +40,6 @@ export default function CategoryList({ url, selectedCategory, setSelectedCategor
           <td>{category.status}</td>
         </tr>
       ))}
-    </tbody>
+    </div>
   )
 }

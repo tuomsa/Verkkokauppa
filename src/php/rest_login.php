@@ -13,7 +13,6 @@ if(!isset($_POST['uname']) || !isset($_POST['pw'])){
     http_response_code(401);
     echo "User not defined";
     return;
-
 }
 $uname = $_POST['uname'];
 $pw = $_POST['pw'];
