@@ -3,7 +3,7 @@ import "./styles/login.css"
 import Login from "./login"
 import { useState } from "react";
 import { Link } from 'react-router-dom'
-import Regg from "./regg";
+
 
 {/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */ }
 

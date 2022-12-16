@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 import "../styles/register.css"
 import { Link } from 'react-router-dom'
 
-
-
-const URL = "http://localhost:3001/src/php/"
-
 export default function Register(props) {
 
     const [uname, setUname] = useState("");
@@ -32,7 +28,6 @@ export default function Register(props) {
         .catch(e=>console.log(e.message))
       }
     
-
     return (
         <div className="formReg">
             <h1 className="reki">REKISTERÖIDY</h1>

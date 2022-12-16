@@ -5,7 +5,6 @@ require('./dbconnection.php');
 // Register
 function registerUser($uname,  $pw,  $email,  $address,  $postnro, $posttmp,  $puhnro)
 {
-
     try {
         $db = openDb();
         //$db->beginTransaction();
