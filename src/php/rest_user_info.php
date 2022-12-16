@@ -8,6 +8,3 @@ if(!isset($_SESSION['username'])){
     echo "No access";
     
 }
-
-
-?>

@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import './styles/navbar.css'
 import Popup from './popup';
 import axios from "axios";
-import logout from './imgVid/logout.png';
-import Home from './imgVid/home.png';
-
 
 export default function Navbar(props) {
 

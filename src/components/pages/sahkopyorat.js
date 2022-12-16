@@ -7,7 +7,7 @@ import axios from "axios";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/carousel.css"; 
+import "../styles/carousel.css";
 
 export default function Sahkopyorat(props) {
 
@@ -27,14 +27,12 @@ export default function Sahkopyorat(props) {
   return (
     <>
       <div className="main">
-          <h1 id="header">Sähköpyörät</h1>
+        <h1 id="header">Sähköpyörät</h1>
         <Swiper
           slidesPerView={2}
           slidesPerGroup={1}
           spaceBetween={10}
-
           breakpoints={{
-
             350: {
               slidesPerView: 2,
               slidesPerGroup: 2,
@@ -45,9 +43,7 @@ export default function Sahkopyorat(props) {
               slidesPerGroup: 1,
               spaceBetween: 10
             }
-
           }}
-
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -57,18 +53,17 @@ export default function Sahkopyorat(props) {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-        
           {products.map(item => (
             <SwiperSlide key={item.tuotenro}>
               <div className="productcard">
-              <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
+                <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
                 <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-lg" onClick={e => props.addToCart(item)}></i></a>
                 <div id="imagecontainer" className="imagecontainer">
-                <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
+                  <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
                 <div className="productdescription">
-                <p className="producttxt">{item.kuvaus}</p>
+                  <p className="producttxt">{item.kuvaus}</p>
                 </div>
                 <h4 className="value">{parseInt(item.hinta)} €</h4>
               </div>

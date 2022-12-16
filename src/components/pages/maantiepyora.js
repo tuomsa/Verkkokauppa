@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/carousel.css";
 
-
 export default function Maantiepyorat(props) {
 
   const [products, setProducts] = useState([]);
@@ -25,8 +24,6 @@ export default function Maantiepyorat(props) {
       });
   }, [])
 
-  
-
   return (
     <>
       <div className="main">
@@ -35,9 +32,7 @@ export default function Maantiepyorat(props) {
           slidesPerView={2}
           slidesPerGroup={1}
           spaceBetween={10}
-
           breakpoints={{
-
             350: {
               slidesPerView: 2,
               slidesPerGroup: 2,
@@ -48,9 +43,7 @@ export default function Maantiepyorat(props) {
               slidesPerGroup: 1,
               spaceBetween: 10
             }
-
           }}
-
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -60,7 +53,6 @@ export default function Maantiepyorat(props) {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-
           {products.map(item => (
             <SwiperSlide key={item.tuotenro}>
               <div className="productcard">
@@ -71,7 +63,7 @@ export default function Maantiepyorat(props) {
                   <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
                 <div className="productdescription">
-                <p className="producttxt">{item.kuvaus}</p>
+                  <p className="producttxt">{item.kuvaus}</p>
                 </div>
                 <h4 className="value">{parseInt(item.hinta)} €</h4>
               </div>

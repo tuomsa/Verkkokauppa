@@ -5,7 +5,6 @@ import logo2 from "../components/imgVid/specialized.png"
 import logo3 from "../components/imgVid/Trek.png"
 import logo4 from "../components/imgVid/Orbea2.png"
 
-
 export default function Footer() {
 
     return (

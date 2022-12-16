@@ -4,9 +4,6 @@ import Login from "./login"
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 
-
-{/* LOGIN-LOMAKE MINKÄ KIRJAUTUMISNAPPI AVAA */ }
-
 export default function PopUp(props) {
 
   const [buttonPopUp, setButtonPopup] = useState(false);
@@ -19,11 +16,7 @@ export default function PopUp(props) {
   return (
     <div className="popup">
       <button className="loginBtn" onClick={() => setButtonPopup(true)}><i className="fa-sharp fa-solid fa-right-to-bracket fa-2xl"></i></button>
-
       <Login trigger={buttonPopUp} setTrigger={setButtonPopup}>
-
-        {/* TÄHÄN ALLE KIRJAUTUMIS LOMAKE */}
-
         <form id="loginForm">
           <div className="input-container">
             <div className="row">

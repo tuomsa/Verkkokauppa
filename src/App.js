@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, BrowserRouter, Link } from 'react-router-dom'
-import Navbar from './components/navbar';
 
+//Pages
 import Home from './components/pages/Home';
 import Maantiepyorat from './components/pages/maantiepyora';
 import Maastopyorat from './components/pages/maastopyorat';
@@ -11,9 +11,11 @@ import Admin from './components/pages/admin';
 import Cart from './components/pages/cart';
 import Register from './components/pages/register';
 
+//Additionals
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 import ScrollToTop from './components/scrollTop';
 import PopUp from './components/popup';
-import Footer from './components/footer';
 import Logo from "./components/imgVid/logo.png"
 import './App.css';
 
@@ -84,9 +86,17 @@ function App() {
             <Route path='/maastopyorat' element={<Maastopyorat url={URL} addToCart={addToCart} />} />
             <Route path='/sahkopyorat' element={<Sahkopyorat url={URL} addToCart={addToCart} />} />
             <Route path='/admin/*' element={<Admin url={URL} />} />
-            <Route path='/login' element={<PopUp />} />       {/*testi,poista rivi*/}
+            <Route path='/login' element={<PopUp />} />   
             <Route path='*' element={<NotFound />} />
-            <Route path='/cart' element={<Cart url={URL} cartItems={cartItems} addToCart={addToCart} subtractFromCart={subtractFromCart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+            <Route path='/cart' element={
+            <Cart 
+            url={URL} 
+            cartItems={cartItems} 
+            addToCart={addToCart} 
+            subtractFromCart={subtractFromCart} 
+            removeFromCart={removeFromCart} 
+            updateAmount={updateAmount} />} 
+            />
             <Route path='/register' element={<Register url={URL} />} />
           </Routes>
         </div>

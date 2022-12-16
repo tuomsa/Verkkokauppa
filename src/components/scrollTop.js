@@ -13,7 +13,6 @@ export default function ScrollToTop() {
   };
 
   useEffect(() => {
-    // Napin näkyvyys kun on scrollattu sivua X määrä
     const toggleVisibility = () => {
       if (window.pageYOffset > 250) {
         setIsVisible(true);

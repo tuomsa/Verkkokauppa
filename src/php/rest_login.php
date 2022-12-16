@@ -25,5 +25,3 @@ if($verified_uname){
     http_response_code(200);
     echo "Wrong username or password";
 }
-
-?>

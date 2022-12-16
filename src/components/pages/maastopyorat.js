@@ -12,7 +12,6 @@ import "../styles/carousel.css";
 export default function Maastopyorat(props) {
 
   const [products, setProducts] = useState([]);
-  
 
   useEffect(() => {
     axios.get(props.url + 'maastopyora.php')
@@ -28,14 +27,12 @@ export default function Maastopyorat(props) {
   return (
     <>
       <div className="main">
-          <label id="header">Maastopyörät</label>
+        <label id="header">Maastopyörät</label>
         <Swiper
           slidesPerView={2}
           slidesPerGroup={1}
           spaceBetween={10}
-
           breakpoints={{
-
             350: {
               slidesPerView: 2,
               slidesPerGroup: 2,
@@ -46,9 +43,7 @@ export default function Maastopyorat(props) {
               slidesPerGroup: 1,
               spaceBetween: 10
             }
-
           }}
-
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -58,18 +53,17 @@ export default function Maastopyorat(props) {
           modules={[Pagination, Navigation]}
           className="mySwiper"
         >
-        
           {products.map(item => (
             <SwiperSlide key={item.tuotenro}>
               <div className="productcard">
-              <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
+                <img id="plogo" className="plogo" src={'/productImg/' + item.logomerkki + ".png"} />
                 <h5 className="productname">{item.tuotemalli.charAt(0).toUpperCase() + item.tuotemalli.slice(1).replace('_', ' ')}</h5>
                 <a className="shop-link" href="#"><i id="productcart" className="fa-solid fa-cart-plus fa-lg" onClick={e => props.addToCart(item)}></i></a>
                 <div id="imagecontainer" className="imagecontainer">
-                <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
+                  <img id="bikepicture" className="bikepicture" src={'/productImg/' + item.logomerkki + "_" + item.tuotemalli + ".png"} />
                 </div>
                 <div className="productdescription">
-                <p className="producttxt">{item.kuvaus}</p>
+                  <p className="producttxt">{item.kuvaus}</p>
                 </div>
                 <h4 className="value">{parseInt(item.hinta)} €</h4>
               </div>

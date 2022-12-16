@@ -3,8 +3,6 @@ import axios from "axios";
 import '../styles/admin.css';
 import CategoryList from "./categorylist";
 
-
-
 export default function ManageCategories(props) {
 
   const [newCategory, setNewCategory] = useState("");
@@ -13,28 +11,26 @@ export default function ManageCategories(props) {
   const [status, setStatus] = useState([]);
 
   const options = [
-    {value: "active", label: 'aseta tuoteryhmä aktiiviseksi'}
+    { value: "active", label: 'aseta tuoteryhmä aktiiviseksi' }
   ];
 
   const handleChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
-      // push selected value in list
       setStatus((prev) => [...prev, value]);
     } else {
-      // remove unchecked value from the list
       setStatus((prev) => prev.filter((opt) => opt !== value));
     }
   };
 
   function saveCategory(e) {
     e.preventDefault();
-    
+
     const formData = new FormData();
     var newCategoryName = document.getElementById("newCategoryInput").value;
     formData.append('name', newCategoryName);
     formData.append('status', status);
-    
+
     axios.post(props.url + 'postcategories.php', formData)
       .then((response) => {
         setNewCategory('');
@@ -64,21 +60,21 @@ export default function ManageCategories(props) {
         <label>Uuden tuoteryhmän nimi:</label>
         <input type="text" id="newCategoryInput" />
         {options.map((opt, i) => (
-        <label key={i}>
-          <input
-            type="checkbox"
-            name="status"
-            className="form-check-input"
-            value={opt.value}
-            onChange={handleChange}
-          />{' '}
-          {opt.label}
-        </label>
+          <label key={i}>
+            <input
+              type="checkbox"
+              name="status"
+              className="form-check-input"
+              value={opt.value}
+              onChange={handleChange}
+            />{' '}
+            {opt.label}
+          </label>
         ))}
         <div>
-        <button type="button" id="cancel" className="btn btn-outline-danger" onClick={() => setAddingCategory(false)}>Peruuta</button>
-        <button type="button" id="savebtn" className="btn btn-outline-success" onClick={e => saveCategory(e)}>Tallenna</button>
-      </div>
+          <button type="button" id="cancel" className="btn btn-outline-danger" onClick={() => setAddingCategory(false)}>Peruuta</button>
+          <button type="button" id="savebtn" className="btn btn-outline-success" onClick={e => saveCategory(e)}>Tallenna</button>
+        </div>
       </div>
     )
   }

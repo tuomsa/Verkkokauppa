@@ -22,7 +22,7 @@ function registerUser($uname,  $pw,  $email,  $address,  $postnro, $posttmp,  $p
     }
 }
 
-// Check User
+// Check if user is in database
 function checkUser($uname, $pw)
 {
     $db = openDb();
@@ -39,7 +39,7 @@ function checkUser($uname, $pw)
     return null;
 }
 
-// Check Status
+// Check User status
 
 function getUserStatus($uname)
 {
