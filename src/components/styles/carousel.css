@@ -6,7 +6,9 @@
 }
 
 #header {
+  font-family: 'Cinzel', serif;
   font-size: 1.8em;
+  color: white;
 }
 
 .swiper {
@@ -19,7 +21,7 @@
 
 .swiper-slide {
   text-align: center;
-  background: #fff; 
+  background: #fff;
   height: 500px;
 
   /* Center slide text vertically */
@@ -79,7 +81,7 @@
 
 .productcard {
   position: absolute;
-  display:flow-root;
+  display: flow-root;
   color: black;
   top: 0;
   width: 100%;
@@ -123,18 +125,19 @@
 
 .productdescription {
   position: relative;
-  height: 200px;
-  font-size: 0.65em;
+  height: 150px;
+  font-size: 1.05em;
   padding-left: 5px;
   padding-right: 5px;
 }
- 
+
 .bottomrack {
- position: relative;
+  position: relative;
 }
 
 .value {
   position: relative;
+  color: black;
 }
 
 #productcart {
@@ -152,6 +155,10 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .productdescription {
+    font-size: 0.65em;
+  }
 
   .swiper-button-prev {
     display: none;

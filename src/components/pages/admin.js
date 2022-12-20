@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/admin.css';
 import CategoryList from "./categorylist";
+import Data from "./productslist";
 
 export default function ManageCategories(props) {
 
@@ -50,8 +51,13 @@ export default function ManageCategories(props) {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
+     
         <button className="btn btn-outline-danger" type="button" onClick={() => setAddingCategory(true)}>Lisää uusi tuoteryhmä</button>
+        <Data
+      url={props.url}
+      />
       </div>
+
     )
   } else {
     return (
